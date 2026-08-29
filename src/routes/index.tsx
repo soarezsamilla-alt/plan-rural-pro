@@ -217,38 +217,36 @@ function PlanRuralLanding() {
 
       {/* 2. HERO */}
       <Section className="bg-cream pb-14 pt-12 md:pb-20 md:pt-16">
-        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
-          <div>
-            <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
-              +120 Proyectos de Fincas y Propiedades Rurales Productivas que
-              transforman tu tierra parada en una fuente de ingresos mensuales
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              La biblioteca más completa de proyectos rurales de América Latina:
-              +120 planos profesionales con medidas reales, divisiones
-              estratégicas y layouts listos para ejecutar.
-            </p>
-            <p className="mt-4 text-sm font-medium text-primary">
-              Acceso inmediato en tu correo · Pago 100% seguro
-            </p>
-            <a
-              href="#planes"
-              className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-8 py-4 text-center text-base font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
-            >
-              Quiero mi proyecto por $5,90
-            </a>
-            <p className="mt-4 text-sm text-muted-foreground">
-              ★ Acceso inmediato · 7 días de garantía ★
-            </p>
-          </div>
+        <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
+            +120 Proyectos de Fincas y Propiedades Rurales Productivas que
+            transforman tu tierra parada en una fuente de ingresos mensuales
+          </h1>
           <img
             src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
             alt="Mockup del pack Plan Rural Edición Premium"
-            className="h-auto w-full rounded-xl object-cover mockup-soft-pulse"
+            className="mockup-soft-pulse my-8 h-auto w-full max-w-lg rounded-xl object-cover md:my-10"
             width="800"
             height="1000"
             loading="eager"
           />
+          <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            La biblioteca más completa de proyectos rurales de América Latina:
+            +120 planos profesionales con medidas reales, divisiones
+            estratégicas y layouts listos para ejecutar.
+          </p>
+          <p className="mt-4 text-sm font-medium text-primary">
+            Acceso inmediato en tu correo · Pago 100% seguro
+          </p>
+          <a
+            href="#planes"
+            className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-8 py-4 text-center text-base font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+          >
+            Quiero mi proyecto por $5,90
+          </a>
+          <p className="mt-4 text-sm text-muted-foreground">
+            ★ Acceso inmediato · 7 días de garantía ★
+          </p>
         </div>
       </Section>
 
