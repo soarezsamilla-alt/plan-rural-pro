@@ -539,10 +539,13 @@ function PlanRuralLanding() {
             <p className="text-sm text-muted-foreground">
               (Pago único · Acceso vitalicio + Bonos)
             </p>
-            <ImagePlaceholder
-              label="mockup acceso completo"
-              ratio="wide"
-              className="mt-5"
+            <img
+              src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
+              alt="Mockup del acceso completo a Plan Rural"
+              className="mt-5 h-auto w-full rounded-xl object-cover"
+              width="800"
+              height="450"
+              loading="lazy"
             />
             <ul className="mt-6 space-y-3">
               {FULL_ITEMS.map((item) => (
