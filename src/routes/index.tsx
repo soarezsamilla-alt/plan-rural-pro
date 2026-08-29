@@ -491,10 +491,13 @@ function PlanRuralLanding() {
             </p>
             <p className="font-display text-4xl text-primary">$5,90</p>
             <p className="text-sm text-muted-foreground">(Pago único)</p>
-            <ImagePlaceholder
-              label="mockup plan básico"
-              ratio="wide"
-              className="mt-5"
+            <img
+              src="https://www.image2url.com/r2/default/images/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
+              alt="Mockup del Plan Básico de Plan Rural"
+              className="mt-5 h-auto w-full rounded-xl object-cover"
+              width="800"
+              height="450"
+              loading="lazy"
             />
             <ul className="mt-6 space-y-3">
               {BASIC_ITEMS.map((item) => (
