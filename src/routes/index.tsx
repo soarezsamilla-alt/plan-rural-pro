@@ -345,7 +345,17 @@ function PlanRuralLanding() {
           <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
-          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-primary-foreground/80">
+          <div className="mx-auto mt-8 max-w-3xl">
+            <img
+              src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
+              alt="Kit con más de 120 proyectos rurales productivos"
+              className="h-auto w-full rounded-xl object-cover"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+          </div>
+          <p className="mx-auto mt-8 max-w-xl leading-relaxed text-primary-foreground/80">
             No es un curso ni un manual teórico. Es una biblioteca visual
             completa, lista para elegir, imprimir y ejecutar.
           </p>
@@ -365,16 +375,6 @@ function PlanRuralLanding() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="mx-auto mt-12 max-w-3xl">
-          <img
-            src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
-            alt="Kit con más de 120 proyectos rurales productivos"
-            className="h-auto w-full rounded-xl object-cover"
-            width="800"
-            height="1000"
-            loading="lazy"
-          />
         </div>
       </Section>
 
