@@ -241,11 +241,16 @@ function PlanRuralLanding() {
               ★ Acceso inmediato · 7 días de garantía ★
             </p>
           </div>
-          <ImagePlaceholder
-            label="mockup del pack Plan Rural"
-            ratio="tall"
-            className="bg-card shadow-soft"
-          />
+          <div className="overflow-hidden rounded-xl bg-card shadow-soft">
+            <img
+              src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
+              alt="Mockup del pack Plan Rural Edición Premium"
+              className="h-auto w-full object-cover"
+              width="800"
+              height="1000"
+              loading="eager"
+            />
+          </div>
         </div>
       </Section>
 
