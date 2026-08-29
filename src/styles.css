@@ -173,3 +173,19 @@
   }
 }
 
+@keyframes mockup-soft-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 12px 30px oklch(0.42 0.096 148 / 0.12));
+  }
+  50% {
+    transform: scale(1.012);
+    filter: drop-shadow(0 18px 40px oklch(0.42 0.096 148 / 0.18));
+  }
+}
+
+.mockup-soft-pulse {
+  animation: mockup-soft-pulse 3.5s ease-in-out infinite;
+}
+
