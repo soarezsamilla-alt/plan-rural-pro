@@ -339,10 +339,13 @@ function PlanRuralLanding() {
       {/* 6. TUDO INCLUÍDO */}
       <Section className="bg-primary text-primary-foreground">
         <div className="grid items-center gap-10 md:grid-cols-2">
-          <ImagePlaceholder
-            label="kit +120 proyectos"
-            ratio="tall"
-            className="border-primary-foreground/30 bg-primary-foreground/10"
+          <img
+            src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
+            alt="Kit con más de 120 proyectos rurales productivos"
+            className="h-auto w-full rounded-xl object-cover"
+            width="800"
+            height="1000"
+            loading="lazy"
           />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-harvest">
