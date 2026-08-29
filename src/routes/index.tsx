@@ -1,24 +1,719 @@
 import { createFileRoute } from "@tanstack/react-router";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  ImagePlaceholder,
+  Section,
+  SectionTitle,
+} from "@/components/plan-rural/primitives";
+import { SampleGallery } from "@/components/plan-rural/sample-gallery";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      {
+        title: "Plan Rural — +120 Proyectos de Fincas Rurales Productivas",
+      },
+      {
+        name: "description",
+        content:
+          "+120 planos profesionales de fincas y propiedades rurales con medidas reales, divisiones estratégicas y layouts listos para ejecutar. Acceso inmediato.",
+      },
+      {
+        property: "og:title",
+        content: "Plan Rural — +120 Proyectos de Fincas Rurales Productivas",
+      },
+      {
+        property: "og:description",
+        content:
+          "La biblioteca más completa de proyectos rurales de América Latina. Acceso inmediato en tu correo y 7 días de garantía.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: PlanRuralLanding,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+/* ---------------------------------------------------------------- datos --- */
+
+const BENEFITS = [
+  {
+    title: "Planifica con Visión Profesional",
+    text: "Deja de adivinar qué hacer con tu terreno. Ahora sigues proyectos listos con división estratégica.",
+  },
+  {
+    title: "Sabe Dónde Va Cada Cosa",
+    text: "Casa, cultivos, animales, riego… todo ya posicionado para el mejor flujo y aprovechamiento.",
+  },
+  {
+    title: "Deja de Perder Tiempo",
+    text: "Sin errores, sin intentos, sin desperdicio. Proyectos con medidas reales para aplicación directa.",
+  },
+  {
+    title: "Empieza en Minutos",
+    text: "Abre el proyecto y aplícalo directo en tu terreno. Recíbelo al instante en tu correo.",
+  },
+];
+
+const WITHOUT = [
+  "Tierra parada sin uso",
+  "No sabes por dónde empezar",
+  "Mezclas todo sin organización",
+  "Dependes de ideas sueltas de internet",
+];
+
+const WITH = [
+  "Terreno dividido con estrategia",
+  "Cada área con función clara",
+  "Más productividad y más ingresos",
+  "Planificación profesional en tu mano",
+];
+
+const INCLUDED = [
+  {
+    title: "Proyectos con Medidas Reales",
+    text: "Planos técnicos dimensionados en metros",
+  },
+  {
+    title: "Divisiones por Vocación Productiva",
+    text: "Café, hortalizas, ganadería, piscicultura y más",
+  },
+  {
+    title: "Adaptados a 5 Regiones Climáticas",
+    text: "Tropical húmedo, sabana, semiárido, templado y andino",
+  },
+  {
+    title: "Acceso Vitalicio e Inmediato",
+    text: "Compra una vez y úsalo siempre",
+  },
+  {
+    title: "Actualizaciones Gratuitas",
+    text: "Siempre nuevos modelos incluidos",
+  },
+  { title: "6 Bonos Exclusivos", text: "abajo 👇" },
+];
+
+const BONUSES = [
+  {
+    id: "Bono 01",
+    title: "Pack de Construcciones Rurales",
+    text: "10 planos listos de gallineros, chiqueros, establos y tanques.",
+    image: "bono-01",
+  },
+  {
+    id: "Bono 02",
+    title: "Calculadora de ROI Productivo",
+    text: "Calculadora editable con retorno financiero estimado.",
+    image: "bono-02",
+  },
+  {
+    id: "Bono 03",
+    title: "Guía de Plantas Compañeras",
+    text: "Aprende qué plantar junto para aumentar la productividad.",
+    image: "bono-03",
+  },
+  {
+    id: "Bono 04",
+    title: "Manual de Energía Solar Rural",
+    text: "Dimensiona sistemas solares para casas, pozos y riego.",
+    image: "bono-04",
+  },
+  {
+    id: "Bono 05",
+    title: "Guía de Cultivos de Alto Valor",
+    text: "Descubre las plantas más rentables por m².",
+    image: "bono-05",
+  },
+  {
+    id: "Bono 06",
+    title: "Manual de Agua y Riego",
+    text: "Capta agua de lluvia, arma cisternas y riego eficiente.",
+    image: "bono-06",
+  },
+];
+
+const STEPS = [
+  { title: "Realiza el Pago", text: "Acceso inmediato tras la confirmación de compra." },
+  { title: "Recibe por Correo", text: "Tu usuario y contraseña llegan en segundos." },
+  {
+    title: "Abre los Proyectos",
+    text: "Descarga los PDFs desde el celular, tablet o computadora.",
+  },
+  { title: "Aplica en tu Tierra", text: "Sigue los planos y transforma tu propiedad." },
+];
+
+const BASIC_ITEMS = [
+  { text: "+120 proyectos completos", included: true },
+  { text: "Acceso inmediato tras la compra", included: true },
+  { text: "Garantía de 7 días", included: true },
+  { text: "Sin los 6 Bonos Exclusivos", included: false },
+];
+
+const FULL_ITEMS = [
+  "+120 proyectos completos",
+  "Bono 1: Construcciones Rurales",
+  "Bono 2: Calculadora ROI",
+  "Bono 3: Plantas Compañeras",
+  "Bono 4: Energía Solar Rural",
+  "Bono 5: Guía de Cultivos Pro",
+  "Bono 6: Manual de Agua/Riego",
+  "Acceso prioritario a nuevos proyectos",
+  "Actualizaciones gratuitas semanales",
+  "Garantía de 7 días",
+];
+
+const FAQ = [
+  {
+    q: "¿Cómo recibo los materiales tras la compra?",
+    a: "Apenas se confirma el pago, recibes en tu correo el acceso con usuario y contraseña.",
+  },
+  {
+    q: "¿Necesito tener experiencia en agricultura?",
+    a: "No. Los proyectos están pensados para que cualquier persona los aplique, incluso sin experiencia técnica.",
+  },
+  {
+    q: "¿Los proyectos sirven para cualquier región?",
+    a: "Sí. Están adaptados a 5 regiones climáticas de América Latina.",
+  },
+  {
+    q: "¿En qué formato se entrega el material?",
+    a: "100% digital, en archivos PDF de alta calidad.",
+  },
+  {
+    q: "¿Funciona para terrenos pequeños?",
+    a: "Sí. Hay proyectos desde 0,5 hasta 5 hectáreas.",
+  },
+  {
+    q: "¿Qué diferencia hay con contratar un agrónomo?",
+    a: "Un proyecto a la medida cuesta miles. Aquí recibes +120 proyectos por un precio único.",
+  },
+  {
+    q: "¿Y si no me gusta el material?",
+    a: "7 días de garantía incondicional. Te devolvemos cada centavo.",
+  },
+];
+
+/* -------------------------------------------------------------- página --- */
+
+function PlanRuralLanding() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-background">
+      {/* 1. BADGE DE TOPO */}
+      <div className="border-b border-border bg-primary text-primary-foreground">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-5 py-3 text-center sm:flex-row sm:text-left">
+          <p className="text-sm font-medium">
+            👀 10 personas están viendo esta página ahora
+          </p>
+          <span className="rounded-full bg-harvest px-3 py-1 text-xs font-semibold uppercase tracking-widest text-harvest-foreground">
+            Edición Premium 2026
+          </span>
+        </div>
+      </div>
+
+      {/* 2. HERO */}
+      <Section className="bg-cream pb-14 pt-12 md:pb-20 md:pt-16">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div>
+            <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
+              +120 Proyectos de Fincas y Propiedades Rurales Productivas que
+              transforman tu tierra parada en una fuente de ingresos mensuales
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              La biblioteca más completa de proyectos rurales de América Latina:
+              +120 planos profesionales con medidas reales, divisiones
+              estratégicas y layouts listos para ejecutar.
+            </p>
+            <p className="mt-4 text-sm font-medium text-primary">
+              Acceso inmediato en tu correo · Pago 100% seguro
+            </p>
+            <a
+              href="#planes"
+              className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-8 py-4 text-center text-base font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+            >
+              Quiero mi proyecto por $5,90
+            </a>
+            <p className="mt-4 text-sm text-muted-foreground">
+              ★ Acceso inmediato · 7 días de garantía ★
+            </p>
+          </div>
+          <ImagePlaceholder
+            label="mockup del pack Plan Rural"
+            ratio="tall"
+            className="bg-card shadow-soft"
+          />
+        </div>
+      </Section>
+
+      {/* 3. BENEFÍCIOS */}
+      <Section>
+        <SectionTitle className="text-center">
+          Lo que va a cambiar en tu propiedad
+        </SectionTitle>
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {BENEFITS.map((item, index) => (
+            <article
+              key={item.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-soft"
+            >
+              <span className="font-display text-2xl text-clay">
+                0{index + 1}
+              </span>
+              <h3 className="mt-3 text-lg leading-snug text-card-foreground">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.text}
+              </p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      {/* 4. GALERIA DE AMOSTRAS */}
+      <Section className="bg-cream">
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionTitle>📖 Una muestra del material que vas a recibir</SectionTitle>
+          <p className="mt-4 text-muted-foreground">
+            Ejemplos reales de las páginas que vas a recibir. Cada proyecto con
+            estándar editorial profesional.
+          </p>
+        </div>
+        <div className="mt-10">
+          <SampleGallery />
+        </div>
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          los +120 proyectos siguen el mismo estándar editorial premium.
+        </p>
+      </Section>
+
+      {/* 5. ANTES / DEPOIS */}
+      <Section>
+        <SectionTitle className="text-center">
+          Mira la diferencia Sin los Proyectos y Con los Proyectos
+        </SectionTitle>
+        <div className="mt-10">
+          <ImagePlaceholder
+            label="comparación split sin/con proyectos"
+            ratio="wide"
+            className="bg-card"
+          />
+        </div>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <div className="rounded-2xl border border-border bg-muted/50 p-6">
+            <h3 className="text-xl text-foreground">Sin los proyectos</h3>
+            <ul className="mt-4 space-y-3">
+              {WITHOUT.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-muted-foreground">
+                  <span aria-hidden="true" className="text-destructive">
+                    ✕
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-primary/25 bg-secondary p-6 shadow-soft">
+            <h3 className="text-xl text-secondary-foreground">Con los proyectos</h3>
+            <ul className="mt-4 space-y-3">
+              {WITH.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-secondary-foreground">
+                  <span aria-hidden="true" className="text-primary">
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* 6. TUDO INCLUÍDO */}
+      <Section className="bg-primary text-primary-foreground">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <ImagePlaceholder
+            label="kit +120 proyectos"
+            ratio="tall"
+            className="border-primary-foreground/30 bg-primary-foreground/10"
+          />
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-harvest">
+              Todo esto está incluido en tu kit
+            </p>
+            <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+              +120 Proyectos de Propiedades Rurales Productivas
+            </h2>
+            <p className="mt-4 leading-relaxed text-primary-foreground/80">
+              No es un curso ni un manual teórico. Es una biblioteca visual
+              completa, lista para elegir, imprimir y ejecutar.
+            </p>
+            <ul className="mt-7 space-y-4">
+              {INCLUDED.map((item) => (
+                <li key={item.title} className="flex gap-3">
+                  <span aria-hidden="true" className="text-harvest">
+                    ✓
+                  </span>
+                  <p className="text-sm leading-relaxed">
+                    <span className="font-semibold">{item.title}</span>
+                    <span className="text-primary-foreground/75">
+                      {" — "}
+                      {item.text}
+                    </span>
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* 7. BÔNUS */}
+      <Section className="bg-cream">
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionTitle>Y no termina aquí… ¡hay más!</SectionTitle>
+          <p className="mt-4 text-muted-foreground">
+            Tu acceso incluye además estos 6 bonos estratégicos, totalmente
+            GRATIS.
+          </p>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {BONUSES.map((bonus) => (
+            <article
+              key={bonus.id}
+              className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-soft"
+            >
+              <ImagePlaceholder label={bonus.image} ratio="wide" />
+              <h3 className="mt-4 text-base leading-snug text-card-foreground">
+                🎁 {bonus.id} — {bonus.title}
+              </h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {bonus.text}
+              </p>
+              <p className="mt-4 text-sm font-semibold text-clay">
+                <span className="line-through opacity-60">$17 USD</span> → GRATIS
+              </p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      {/* 8. CTA */}
+      <Section className="py-12 md:py-16">
+        <div className="flex justify-center">
+          <a
+            href="#planes"
+            className="inline-flex w-full items-center justify-center rounded-full bg-clay px-10 py-5 text-center text-base font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+          >
+            Quiero el plan completo ›
+          </a>
+        </div>
+      </Section>
+
+      {/* 9. GALERIA DE AMOSTRAS (repetição) */}
+      <Section className="bg-cream">
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionTitle>Deja de buscar proyectos dispersos por ahí</SectionTitle>
+          <p className="mt-4 text-muted-foreground">
+            Ten en tus manos la mayor biblioteca de planos de fincas y casas de
+            campo de América Latina.
+          </p>
+        </div>
+        <div className="mt-10">
+          <SampleGallery />
+        </div>
+      </Section>
+
+      {/* 10. COMO FUNCIONA */}
+      <Section>
+        <SectionTitle className="text-center">
+          Empieza a organizar en minutos
+        </SectionTitle>
+        <ol className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {STEPS.map((step, index) => (
+            <li
+              key={step.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-soft"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-lg text-primary-foreground">
+                {index + 1}
+              </span>
+              <h3 className="mt-4 text-lg leading-snug text-card-foreground">
+                {step.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {step.text}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      {/* 11. DEPOIMENTOS */}
+      <Section className="bg-cream">
+        <SectionTitle className="mx-auto max-w-2xl text-center">
+          Resultados reales y comentarios de productores que ya usan Plan Rural.
+        </SectionTitle>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {Array.from({ length: 6 }, (_, index) => (
+            <ImagePlaceholder
+              key={index}
+              label={`testimonio-0${index + 1}`}
+              ratio="tall"
+              className="bg-card"
+            />
+          ))}
+        </div>
+      </Section>
+
+      {/* 12. PLANOS */}
+      <Section id="planes">
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionTitle>Elige tu plan y empieza ahora</SectionTitle>
+          <p className="mt-4 inline-block rounded-full bg-harvest px-4 py-2 text-sm font-semibold text-harvest-foreground">
+            ⏱ OFERTA DISPONIBLE SOLO HOY, --/--/----
+          </p>
+        </div>
+
+        <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">
+          {/* Plan Básico */}
+          <article className="rounded-3xl border border-border bg-card p-7 shadow-soft">
+            <h3 className="text-2xl text-card-foreground">Plan Básico</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              De <span className="line-through">$47 USD</span> por:
+            </p>
+            <p className="font-display text-4xl text-primary">$5,90</p>
+            <p className="text-sm text-muted-foreground">(Pago único)</p>
+            <ImagePlaceholder
+              label="mockup plan básico"
+              ratio="wide"
+              className="mt-5"
+            />
+            <ul className="mt-6 space-y-3">
+              {BASIC_ITEMS.map((item) => (
+                <li key={item.text} className="flex gap-3 text-sm">
+                  <span
+                    aria-hidden="true"
+                    className={item.included ? "text-primary" : "text-destructive"}
+                  >
+                    {item.included ? "✓" : "✕"}
+                  </span>
+                  <span
+                    className={
+                      item.included ? "text-card-foreground" : "text-muted-foreground"
+                    }
+                  >
+                    {item.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#"
+              className="mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-4 text-sm font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              Quiero el Básico ›
+            </a>
+            <p className="mt-2 text-center text-xs text-muted-foreground">
+              [LINK DE CHECKOUT — BÁSICO]
+            </p>
+          </article>
+
+          {/* Acceso Completo */}
+          <article className="relative rounded-3xl border-2 border-clay bg-card p-7 shadow-lift">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-4 py-1 text-xs font-bold uppercase tracking-widest text-clay-foreground">
+              ★ Acceso Completo ★
+            </span>
+            <h3 className="mt-2 text-2xl text-card-foreground">Acceso Completo</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              De <span className="line-through">$137 USD</span> por:
+            </p>
+            <p className="font-display text-4xl text-clay">$9,90</p>
+            <p className="text-sm text-muted-foreground">
+              (Pago único · Acceso vitalicio + Bonos)
+            </p>
+            <ImagePlaceholder
+              label="mockup acceso completo"
+              ratio="wide"
+              className="mt-5"
+            />
+            <ul className="mt-6 space-y-3">
+              {FULL_ITEMS.map((item) => (
+                <li key={item} className="flex gap-3 text-sm text-card-foreground">
+                  <span aria-hidden="true" className="text-primary">
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#"
+              className="mt-7 flex w-full items-center justify-center rounded-full bg-clay px-6 py-4 text-sm font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              Quiero el plan completo ›
+            </a>
+            <p className="mt-2 text-center text-xs text-muted-foreground">
+              [LINK DE CHECKOUT — COMPLETO]
+            </p>
+          </article>
+        </div>
+
+        <p className="mt-8 text-center text-sm font-medium text-foreground">
+          🔥 No vas a encontrar este precio después.
+        </p>
+        <p className="text-center text-sm text-muted-foreground">
+          Pago 100% seguro · Acceso inmediato
+        </p>
+      </Section>
+
+      {/* 13. INSTAGRAM */}
+      <Section className="bg-cream">
+        <div className="mx-auto max-w-2xl text-center">
+          <SectionTitle>
+            Síguenos en Instagram y mira a Plan Rural en acción
+          </SectionTitle>
+          <p className="mt-4 text-muted-foreground">
+            Consejos de planificación rural, proyectos reales y contenido
+            exclusivo todas las semanas. ¿Tienes dudas? Escríbenos por allí.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 rounded-3xl border border-border bg-card p-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:p-8">
+          <div>
+            <div className="flex items-center gap-4">
+              <ImagePlaceholder
+                label="foto de perfil Plan Rural"
+                ratio="square"
+                className="h-20 w-20 shrink-0 rounded-full"
+              />
+              <div>
+                <p className="font-display text-xl text-card-foreground">Plan Rural</p>
+                <p className="text-sm text-muted-foreground">@plan.rural.oficial</p>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Planificación rural de la manera correcta
+              <br />
+              +120 proyectos profesionales de fincas
+            </p>
+            <dl className="mt-6 grid grid-cols-3 gap-3 text-center">
+              <div className="rounded-xl bg-muted p-3">
+                <dt className="font-display text-lg text-foreground">+120</dt>
+                <dd className="text-xs text-muted-foreground">Proyectos</dd>
+              </div>
+              <div className="rounded-xl bg-muted p-3">
+                <dt className="font-display text-lg text-foreground">
+                  [preencher com número real]
+                </dt>
+                <dd className="text-xs text-muted-foreground">Productores</dd>
+              </div>
+              <div className="rounded-xl bg-muted p-3">
+                <dt className="font-display text-lg text-foreground">15+</dt>
+                <dd className="text-xs text-muted-foreground">Años exp.</dd>
+              </div>
+            </dl>
+            <a
+              href="#"
+              className="mt-6 flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            >
+              Ver Plan Rural en Instagram
+            </a>
+            <p className="mt-3 text-center text-sm text-muted-foreground">
+              ¿Tienes dudas? Escríbenos directo al perfil
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            {[1, 2, 3].map((n) => (
+              <ImagePlaceholder key={n} label={`ig-post-${n}`} ratio="square" />
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-6 text-center text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+          ✓ Contenido nuevo toda la semana • Consejos reales de planificación
+          rural • Sin rodeos
+        </p>
+      </Section>
+
+      {/* 14. GARANTIA */}
+      <Section>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl border border-border bg-card p-8 text-center shadow-soft md:flex-row md:text-left">
+          <ImagePlaceholder
+            label="sello garantía 7 días"
+            ratio="square"
+            className="h-32 w-32 shrink-0 rounded-full"
+          />
+          <div>
+            <h2 className="font-display text-2xl text-card-foreground md:text-3xl">
+              Garantía Incondicional de 7 Días
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Tenemos tanta confianza en el valor de Plan Rural que asumimos
+              todo el riesgo. Si en 7 días no estás 100% satisfecho, te
+              devolvemos cada centavo.
+            </p>
+            <p className="mt-3 text-sm font-semibold text-primary">
+              Riesgo cero para ti
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* 15. FAQ */}
+      <Section className="bg-cream">
+        <div className="mx-auto max-w-3xl">
+          <SectionTitle className="text-center">Preguntas frecuentes</SectionTitle>
+          <Accordion type="single" collapsible className="mt-8">
+            {FAQ.map((item, index) => (
+              <AccordionItem key={item.q} value={`faq-${index}`}>
+                <AccordionTrigger className="text-left text-base">
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-sm leading-relaxed text-muted-foreground">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </Section>
+
+      {/* 16. RODAPÉ */}
+      <footer className="bg-primary px-5 py-12 text-primary-foreground">
+        <div className="mx-auto w-full max-w-3xl text-center">
+          <p className="font-display text-2xl">PLAN RURAL</p>
+          <p className="mt-1 text-sm text-primary-foreground/75">
+            Edición Premium 2026 · Todos los derechos reservados
+          </p>
+          <p className="mt-4 text-sm">
+            <a href="#" className="underline underline-offset-4">
+              Términos de Uso
+            </a>
+            <span className="px-2 text-primary-foreground/50">|</span>
+            <a href="#" className="underline underline-offset-4">
+              Política de Privacidad
+            </a>
+          </p>
+          <p className="mt-6 text-xs leading-relaxed text-primary-foreground/70">
+            Este sitio no está afiliado a Facebook, Instagram, Google ni a
+            ninguna otra plataforma. Los resultados dependen del esfuerzo y la
+            aplicación práctica del cliente.
+          </p>
+        </div>
+      </footer>
+
+      {/* Prova social flutuante */}
+      <div className="pointer-events-none fixed bottom-4 left-4 z-50 max-w-[calc(100%-2rem)] rounded-xl border border-border bg-card px-4 py-3 shadow-lift">
+        <p className="text-xs text-card-foreground">
+          <span className="font-semibold">Juan P., de Bogotá</span> — Acaba de
+          comprar · ahora mismo
+        </p>
+      </div>
+    </main>
   );
 }
