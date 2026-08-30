@@ -319,12 +319,12 @@ function PlanRuralLanding() {
                 height={1024}
               />
               <div aria-hidden="true" className="absolute inset-y-0 left-1/2 w-1 -translate-x-1/2 bg-foreground" />
-              <div className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:left-5 md:top-5 md:px-4 md:py-2 md:text-sm">
-                <span aria-hidden="true" className="mr-1.5 text-destructive">✕</span>
+              <div className="absolute left-3 top-3 rounded-full bg-black/70 px-2 py-1 text-[10px] font-semibold text-white backdrop-blur-sm md:left-5 md:top-5 md:px-3 md:py-1.5 md:text-xs">
+                <span aria-hidden="true" className="mr-1 text-destructive">✕</span>
                 Sin los Proyectos
               </div>
-              <div className="absolute right-3 top-3 rounded-full bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:right-5 md:top-5 md:px-4 md:py-2 md:text-sm">
-                <span aria-hidden="true" className="mr-1.5 text-primary">✓</span>
+              <div className="absolute right-3 top-3 rounded-full bg-black/70 px-2 py-1 text-[10px] font-semibold text-white backdrop-blur-sm md:right-5 md:top-5 md:px-3 md:py-1.5 md:text-xs">
+                <span aria-hidden="true" className="mr-1 text-primary">✓</span>
                 Con +120 Proyectos
               </div>
             </div>
