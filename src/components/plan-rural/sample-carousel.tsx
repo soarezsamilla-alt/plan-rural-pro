@@ -33,6 +33,27 @@ const slideSizeMap = {
   },
 };
 
+const marqueeSlideSizeMap = {
+  small: {
+    mobile: "w-[130px]",
+    sm: "sm:w-[150px]",
+    md: "md:w-[170px]",
+    lg: "lg:w-[190px]",
+  },
+  default: {
+    mobile: "w-[220px]",
+    sm: "sm:w-[260px]",
+    md: "md:w-[300px]",
+    lg: "lg:w-[340px]",
+  },
+  large: {
+    mobile: "w-[260px]",
+    sm: "sm:w-[320px]",
+    md: "md:w-[380px]",
+    lg: "lg:w-[440px]",
+  },
+};
+
 function MarqueeSlide({
   src,
   index,
