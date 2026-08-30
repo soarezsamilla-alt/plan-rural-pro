@@ -10,6 +10,7 @@ interface SampleCarouselProps {
   size?: "small" | "default" | "large";
   showArrows?: boolean;
   marquee?: boolean;
+  pauseOnHover?: boolean;
 }
 
 const slideSizeMap = {
@@ -35,10 +36,10 @@ const slideSizeMap = {
 
 const marqueeSlideSizeMap = {
   small: {
-    mobile: "w-[130px]",
-    sm: "sm:w-[150px]",
-    md: "md:w-[170px]",
-    lg: "lg:w-[190px]",
+    mobile: "w-[150px]",
+    sm: "sm:w-[180px]",
+    md: "md:w-[200px]",
+    lg: "lg:w-[230px]",
   },
   default: {
     mobile: "w-[220px]",
