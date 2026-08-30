@@ -51,15 +51,13 @@ export function SampleCarousel({ images, className }: SampleCarouselProps) {
               key={src}
               className="min-w-0 flex-[0_0_75%] sm:flex-[0_0_50%] md:flex-[0_0_33.333%] lg:flex-[0_0_25%]"
             >
-              <div className="overflow-hidden rounded-xl border border-border bg-card shadow-soft">
+              <div className="flex items-center justify-center overflow-hidden rounded-xl border border-border bg-card shadow-soft">
                 <img
                   src={src}
                   alt={`Muestra del material ${String(index + 1).padStart(2, "0")}`}
-                  className="aspect-[3/4] h-auto w-full object-cover"
+                  className="h-auto w-full object-contain"
                   loading="lazy"
                   decoding="async"
-                  width={600}
-                  height={800}
                 />
               </div>
             </div>
