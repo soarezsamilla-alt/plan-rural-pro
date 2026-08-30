@@ -14,10 +14,10 @@ interface SampleCarouselProps {
 
 const slideSizeMap = {
   small: {
-    mobile: "flex-[0_0_50%]",
-    sm: "sm:flex-[0_0_32%]",
-    md: "md:flex-[0_0_22%]",
-    lg: "lg:flex-[0_0_17%]",
+    mobile: "flex-[0_0_38%]",
+    sm: "sm:flex-[0_0_24%]",
+    md: "md:flex-[0_0_18%]",
+    lg: "lg:flex-[0_0_14%]",
   },
   default: {
     mobile: "flex-[0_0_75%]",
@@ -33,6 +33,27 @@ const slideSizeMap = {
   },
 };
 
+const marqueeSlideSizeMap = {
+  small: {
+    mobile: "w-[130px]",
+    sm: "sm:w-[150px]",
+    md: "md:w-[170px]",
+    lg: "lg:w-[190px]",
+  },
+  default: {
+    mobile: "w-[220px]",
+    sm: "sm:w-[260px]",
+    md: "md:w-[300px]",
+    lg: "lg:w-[340px]",
+  },
+  large: {
+    mobile: "w-[260px]",
+    sm: "sm:w-[320px]",
+    md: "md:w-[380px]",
+    lg: "lg:w-[440px]",
+  },
+};
+
 function MarqueeSlide({
   src,
   index,
@@ -42,11 +63,11 @@ function MarqueeSlide({
   index: number;
   size: "small" | "default" | "large";
 }) {
-  const slideClasses = slideSizeMap[size];
+  const slideClasses = marqueeSlideSizeMap[size];
   return (
     <div
       className={cn(
-        "min-w-0 shrink-0 px-2",
+        "min-w-0 shrink-0",
         slideClasses.mobile,
         slideClasses.sm,
         slideClasses.md,
