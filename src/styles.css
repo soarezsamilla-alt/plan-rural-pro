@@ -200,8 +200,34 @@
   content: "";
   position: absolute;
   inset: 0;
-  transform: translateX(-100%);
-  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.12), transparent);
-  animation: badge-shimmer 3s ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(1 0 0 / 0.35) 50%,
+    transparent 100%
+  );
+  animation: badge-shimmer 2.5s ease-in-out infinite;
+}
+
+@keyframes sample-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.sample-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: sample-marquee var(--marquee-duration, 60s) linear infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sample-marquee-track:hover,
+.sample-marquee-track:active {
+  animation-play-state: running;
 }
 
