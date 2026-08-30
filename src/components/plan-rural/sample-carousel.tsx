@@ -7,10 +7,17 @@ import { useCallback, useEffect, useState } from "react";
 interface SampleCarouselProps {
   images: string[];
   className?: string;
-  size?: "default" | "large";
+  size?: "small" | "default" | "large";
+  showArrows?: boolean;
 }
 
 const slideSizeMap = {
+  small: {
+    mobile: "flex-[0_0_60%]",
+    sm: "sm:flex-[0_0_40%]",
+    md: "md:flex-[0_0_28%]",
+    lg: "lg:flex-[0_0_22%]",
+  },
   default: {
     mobile: "flex-[0_0_75%]",
     sm: "sm:flex-[0_0_50%]",
