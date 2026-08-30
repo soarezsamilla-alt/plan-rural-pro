@@ -187,3 +187,21 @@
   animation: mockup-soft-pulse 3.5s ease-in-out infinite;
 }
 
+@keyframes badge-shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.badge-shimmer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.12), transparent);
+  animation: badge-shimmer 3s ease-in-out infinite;
+}
+
