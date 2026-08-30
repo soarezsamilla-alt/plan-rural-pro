@@ -376,9 +376,16 @@ function PlanRuralLanding() {
       {/* 6. TUDO INCLUÍDO */}
       <Section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-harvest">
-            Todo esto está incluido en tu kit
-          </p>
+          <div className="group relative mb-5 inline-block">
+            <div className="absolute -inset-1 rounded-full bg-harvest/30 opacity-75 blur-md transition-opacity duration-700 group-hover:opacity-100" />
+            <div className="relative flex items-center gap-2 overflow-hidden rounded-full border border-harvest/25 bg-card/60 px-3 py-1.5 backdrop-blur-xl shadow-[0_0_15px_-3px_oklch(0.78_0.16_78_/_0.25)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-harvest shadow-[0_0_6px_oklch(0.78_0.16_78_/_0.8)]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-foreground">
+                Todo esto está incluido en tu kit
+              </span>
+              <span aria-hidden="true" className="badge-shimmer absolute inset-0 rounded-full" />
+            </div>
+          </div>
           <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
