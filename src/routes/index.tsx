@@ -127,7 +127,7 @@ const BONUSES = [
   },
   {
     id: "Bono 05",
-    title: "Checklist de Viabilidad Rural",
+    title: "Guía de Cultivos de Alto Valor",
     text: "Lista de verificación paso a paso para evaluar tu terreno.",
     image: "https://www.image2url.com/r2/default/images/1788106129504-e7e19a14-fc07-41a8-89ac-ae837938b8c0.blob",
   },
