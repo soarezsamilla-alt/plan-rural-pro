@@ -397,9 +397,9 @@ function PlanRuralLanding() {
       </Section>
 
       {/* 6. TUDO INCLUÍDO */}
-      <Section className="bg-primary text-primary-foreground">
+      <Section className="bg-primary py-10 text-primary-foreground md:py-14">
         <div className="mx-auto max-w-5xl text-center">
-          <div className="group relative mb-2 inline-block">
+          <div className="group relative mb-1 inline-block">
             <div className="absolute -inset-1 rounded-full bg-harvest/30 opacity-75 blur-md transition-opacity duration-700 group-hover:opacity-100" />
             <div className="relative flex items-center gap-1.5 overflow-hidden rounded-full border border-harvest/25 bg-card/60 px-2.5 py-1 backdrop-blur-xl shadow-[0_0_12px_-3px_oklch(0.78_0.16_78_/_0.25)]">
               <span className="h-1 w-1 rounded-full bg-harvest shadow-[0_0_5px_oklch(0.78_0.16_78_/_0.8)]" />
@@ -409,10 +409,10 @@ function PlanRuralLanding() {
               <span aria-hidden="true" className="badge-shimmer absolute inset-0 rounded-full" />
             </div>
           </div>
-          <h2 className="mt-1 font-display text-2xl leading-tight md:text-3xl">
+          <h2 className="font-display text-2xl leading-tight md:text-3xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
-          <div className="mx-auto mt-4 max-w-5xl">
+          <div className="mx-auto mt-2 max-w-5xl">
             <img
               src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
@@ -422,11 +422,11 @@ function PlanRuralLanding() {
               loading="lazy"
             />
           </div>
-          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-primary-foreground/80">
+          <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-primary-foreground/80">
             No es un curso ni un manual teórico. Es una biblioteca visual
             completa, lista para elegir, imprimir y ejecutar.
           </p>
-          <ul className="mx-auto mt-4 max-w-xl space-y-2 text-left">
+          <ul className="mx-auto mt-2 max-w-xl space-y-1 text-left">
             {INCLUDED.map((item) => (
               <li key={item.title} className="flex gap-3">
                 <span aria-hidden="true" className="text-harvest">
