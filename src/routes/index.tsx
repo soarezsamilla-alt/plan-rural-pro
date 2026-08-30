@@ -217,9 +217,20 @@ function PlanRuralLanding() {
       {/* 2. HERO */}
       <Section className="bg-cream pb-14 pt-12 md:pb-20 md:pt-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <span className="mb-5 rounded-full bg-harvest px-3 py-1 text-xs font-semibold uppercase tracking-widest text-harvest-foreground">
-            Edición Premium 2026
-          </span>
+          <div className="group relative mb-5">
+            {/* Soft glow layer */}
+            <div className="absolute -inset-1 rounded-full bg-harvest/30 opacity-75 blur-md transition-opacity duration-700 group-hover:opacity-100" />
+            {/* Badge body */}
+            <div className="relative flex items-center gap-2 overflow-hidden rounded-full border border-harvest/25 bg-card/60 px-3 py-1.5 backdrop-blur-xl shadow-[0_0_15px_-3px_oklch(0.78_0.16_78_/_0.25)]">
+              {/* Indicator dot */}
+              <span className="h-1.5 w-1.5 rounded-full bg-harvest shadow-[0_0_6px_oklch(0.78_0.16_78_/_0.8)]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-foreground">
+                Edición Premium 2026
+              </span>
+              {/* Shimmer sweep */}
+              <span aria-hidden="true" className="badge-shimmer absolute inset-0 rounded-full" />
+            </div>
+          </div>
           <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
             +120 Proyectos de Fincas y Propiedades Rurales Productivas que
             transforman tu tierra parada en una fuente de ingresos mensuales
