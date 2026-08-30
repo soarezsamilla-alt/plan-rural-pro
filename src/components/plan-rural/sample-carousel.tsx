@@ -135,7 +135,7 @@ export function SampleCarousel({
     const duplicatedImages = [...images, ...images];
     return (
       <div className={cn("relative overflow-hidden rounded-2xl", className)}>
-        <div className="marquee-track">
+        <div className={cn("marquee-track", !pauseOnHover && "marquee-track-no-pause")}>
           {duplicatedImages.map((src, index) => (
             <MarqueeSlide key={`${src}-${index}`} src={src} index={index % images.length} size={size} />
           ))}
