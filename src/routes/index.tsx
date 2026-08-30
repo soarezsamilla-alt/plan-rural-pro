@@ -10,7 +10,7 @@ import {
   Section,
   SectionTitle,
 } from "@/components/plan-rural/primitives";
-import { SampleGallery } from "@/components/plan-rural/sample-gallery";
+import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
 import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
 import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
 
@@ -198,6 +198,29 @@ const FAQ = [
     q: "¿Y si no me gusta el material?",
     a: "7 días de garantía incondicional. Te devolvemos cada centavo.",
   },
+];
+
+const SAMPLES = [
+  "https://www.image2url.com/r2/default/images/1788107393364-2b3f0664-1e15-43bb-9c2b-6f9fbf0aa883.blob",
+  "https://www.image2url.com/r2/default/images/1788107424751-eae8c672-f3de-4ef0-9675-e318f9afdfa0.blob",
+  "https://www.image2url.com/r2/default/images/1788107447842-cb731f8d-72d6-4b41-8509-644d126e50a0.blob",
+  "https://www.image2url.com/r2/default/images/1788107467441-c8066bd3-a828-45de-82e7-0b2a74d147fc.blob",
+  "https://www.image2url.com/r2/default/images/1788107484909-b89bfc94-c0c4-440b-bffd-60c2b5491e36.blob",
+  "https://www.image2url.com/r2/default/images/1788107499463-6fd4097f-4147-4389-9026-39eccf1290a8.blob",
+  "https://www.image2url.com/r2/default/images/1788107519031-5c573030-c0d4-473c-8a20-d69aa9228775.blob",
+  "https://www.image2url.com/r2/default/images/1788107533217-76cf1aab-0dac-4c25-b0d8-2f2c91819532.blob",
+  "https://www.image2url.com/r2/default/images/1788107551863-d2a8c87b-13b7-4155-8c58-f6c815100a10.blob",
+  "https://www.image2url.com/r2/default/images/1788107567584-03d2a691-01be-4d3d-8c38-e3ecde11e06a.blob",
+  "https://www.image2url.com/r2/default/images/1788107621199-bd881447-1d48-451c-aa3a-42aca152646d.blob",
+  "https://www.image2url.com/r2/default/images/1788107634508-d3ec530a-ad08-4e5a-98dc-a79648deb9f4.blob",
+  "https://www.image2url.com/r2/default/images/1788107653346-63c97a92-36d9-42d6-abc1-130cec3c5c5b.blob",
+  "https://www.image2url.com/r2/default/images/1788107667770-1b2a54b2-61a1-46e5-aec9-151d65146675.blob",
+  "https://www.image2url.com/r2/default/images/1788107682306-8278b1cf-50c6-4594-9f99-c5c2351ccf89.blob",
+  "https://www.image2url.com/r2/default/images/1788107695201-6f23b95f-588d-44d4-98af-280537375171.blob",
+  "https://www.image2url.com/r2/default/images/1788107713951-3e6b1cd3-4370-4108-9065-a1e9efa8b663.blob",
+  "https://www.image2url.com/r2/default/images/1788107727394-b56757ec-4084-4228-a9dd-f1f720e2c39f.blob",
+  "https://www.image2url.com/r2/default/images/1788107741565-c424f3b4-ceee-46cc-8e65-d5600c620219.blob",
+  "https://www.image2url.com/r2/default/images/1788107756331-33998a6f-dc99-4866-a39b-1bb460a98657.blob",
 ];
 
 /* -------------------------------------------------------------- página --- */
