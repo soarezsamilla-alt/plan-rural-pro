@@ -111,7 +111,7 @@ const BONUSES = [
     id: "Bono 02",
     title: "Calculadora de ROI Productivo",
     text: "Calculadora editable con retorno financiero estimado.",
-    image: "bono-02",
+    image: "https://www.image2url.com/r2/default/images/1788105963768-6b826a84-9149-431e-a3f3-544ee53878ab.blob",
   },
   {
     id: "Bono 03",
