@@ -376,7 +376,7 @@ function PlanRuralLanding() {
       {/* 6. TUDO INCLUÍDO */}
       <Section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-3xl text-center">
-          <div className="group relative mb-5 inline-block">
+          <div className="group relative mb-3 inline-block">
             <div className="absolute -inset-1 rounded-full bg-harvest/30 opacity-75 blur-md transition-opacity duration-700 group-hover:opacity-100" />
             <div className="relative flex items-center gap-1.5 overflow-hidden rounded-full border border-harvest/25 bg-card/60 px-2.5 py-1 backdrop-blur-xl shadow-[0_0_12px_-3px_oklch(0.78_0.16_78_/_0.25)]">
               <span className="h-1 w-1 rounded-full bg-harvest shadow-[0_0_5px_oklch(0.78_0.16_78_/_0.8)]" />
@@ -386,10 +386,10 @@ function PlanRuralLanding() {
               <span aria-hidden="true" className="badge-shimmer absolute inset-0 rounded-full" />
             </div>
           </div>
-          <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
+          <h2 className="mt-2 font-display text-3xl leading-tight md:text-4xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
-          <div className="mx-auto mt-8 max-w-4xl">
+          <div className="mx-auto mt-5 max-w-4xl">
             <img
               src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
@@ -399,11 +399,11 @@ function PlanRuralLanding() {
               loading="lazy"
             />
           </div>
-          <p className="mx-auto mt-8 max-w-xl leading-relaxed text-primary-foreground/80">
+          <p className="mx-auto mt-5 max-w-xl leading-relaxed text-primary-foreground/80">
             No es un curso ni un manual teórico. Es una biblioteca visual
             completa, lista para elegir, imprimir y ejecutar.
           </p>
-          <ul className="mx-auto mt-7 max-w-xl space-y-4 text-left">
+          <ul className="mx-auto mt-5 max-w-xl space-y-3 text-left">
             {INCLUDED.map((item) => (
               <li key={item.title} className="flex gap-3">
                 <span aria-hidden="true" className="text-harvest">
