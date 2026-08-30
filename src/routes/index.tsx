@@ -121,7 +121,7 @@ const BONUSES = [
   },
   {
     id: "Bono 04",
-    title: "Plantillas de Presentación para Inversionistas",
+    title: "Manual de Energía Solar Rural",
     text: "Slides listos para defender tu proyecto ante bancos o socios.",
     image: "https://www.image2url.com/r2/default/images/1788106085460-45dbe0c5-d117-45e7-9a0a-20bbfe4aa462.blob",
   },
