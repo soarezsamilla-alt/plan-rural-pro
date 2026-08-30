@@ -133,7 +133,7 @@ const BONUSES = [
   },
   {
     id: "Bono 06",
-    title: "Guía de Normativas y Permisos por País",
+    title: "Manual de Agua y Riego",
     text: "Resumen de regulaciones para proyectos rurales en Latinoamérica.",
     image: "https://www.image2url.com/r2/default/images/1788106168351-5a6ee2ac-f161-4a5e-8a84-6e698d3fb5a7.blob",
   },
