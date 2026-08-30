@@ -321,7 +321,7 @@ function PlanRuralLanding() {
           </p>
         </div>
         <div className="mt-10">
-          <SampleCarousel images={SAMPLES} />
+          <SampleCarousel images={SAMPLES} size="large" />
         </div>
         <p className="mt-6 text-center text-sm text-muted-foreground">
           los +120 proyectos siguen el mismo estándar editorial premium.
