@@ -497,7 +497,7 @@ function PlanRuralLanding() {
           </p>
         </div>
         <div className="mt-10">
-          <SampleCarousel images={SAMPLES} size="small" showArrows={false} marquee />
+          <SampleCarousel images={SAMPLES} size="small" showArrows={false} />
         </div>
       </Section>
 
