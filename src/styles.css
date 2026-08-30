@@ -226,3 +226,8 @@
   animation-play-state: paused;
 }
 
+.marquee-track-no-pause,
+.marquee-track-no-pause:hover {
+  animation-play-state: running;
+}
+
