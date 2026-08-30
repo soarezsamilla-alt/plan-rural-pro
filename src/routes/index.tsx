@@ -11,7 +11,8 @@ import {
   SectionTitle,
 } from "@/components/plan-rural/primitives";
 import { SampleGallery } from "@/components/plan-rural/sample-gallery";
-import comparacionAereaAsset from "@/assets/comparacion-aerea-rural.png.asset.json";
+import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
+import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -299,22 +300,33 @@ function PlanRuralLanding() {
           Mira la diferencia Sin los Proyectos y Con los Proyectos
         </SectionTitle>
         <div className="mt-10">
-          <div className="relative overflow-hidden rounded-2xl border-4 border-card bg-card shadow-lift">
-            <img
-              src={comparacionAereaAsset.url}
-              alt="Comparación aérea de una propiedad rural sin y con los proyectos"
-              className="w-full object-cover"
-              loading="lazy"
-              width={1200}
-              height={675}
-            />
-            <div className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:left-5 md:top-5 md:px-4 md:py-2 md:text-sm">
-              <span aria-hidden="true" className="mr-1.5 text-destructive">✕</span>
-              Sin los Proyectos
-            </div>
-            <div className="absolute right-3 top-3 rounded-full border border-white/20 bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:right-5 md:top-5 md:px-4 md:py-2 md:text-sm">
-              <span aria-hidden="true" className="mr-1.5 text-primary">✓</span>
-              Con +120 Proyectos
+          <div className="rounded-[1.75rem] bg-foreground p-2 shadow-lift md:p-3">
+            <div className="relative grid grid-cols-2 overflow-hidden rounded-3xl">
+              <img
+                src={aereoAntesAsset.url}
+                alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
+                className="h-full w-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={1024}
+              />
+              <img
+                src={aereoDespuesAsset.url}
+                alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
+                className="h-full w-full object-cover"
+                loading="lazy"
+                width={1024}
+                height={1024}
+              />
+              <div aria-hidden="true" className="absolute inset-y-0 left-1/2 w-1 -translate-x-1/2 bg-foreground" />
+              <div className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:left-5 md:top-5 md:px-4 md:py-2 md:text-sm">
+                <span aria-hidden="true" className="mr-1.5 text-destructive">✕</span>
+                Sin los Proyectos
+              </div>
+              <div className="absolute right-3 top-3 rounded-full bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:right-5 md:top-5 md:px-4 md:py-2 md:text-sm">
+                <span aria-hidden="true" className="mr-1.5 text-primary">✓</span>
+                Con +120 Proyectos
+              </div>
             </div>
           </div>
         </div>
