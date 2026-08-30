@@ -20,6 +20,23 @@ export function ImagePlaceholder({
   className,
   ...props
 }: ImagePlaceholderProps) {
+  const isUrl = /^https?:\/\//i.test(label);
+  if (isUrl) {
+    return (
+      <img
+        src={label}
+        alt="Mockup del bono"
+        className={cn(
+          "h-auto w-full rounded-xl object-cover",
+          ratioMap[ratio],
+          className,
+        )}
+        loading="lazy"
+        decoding="async"
+      />
+    );
+  }
+
   return (
     <div
       {...props}
