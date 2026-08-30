@@ -63,11 +63,11 @@ function MarqueeSlide({
   index: number;
   size: "small" | "default" | "large";
 }) {
-  const slideClasses = slideSizeMap[size];
+  const slideClasses = marqueeSlideSizeMap[size];
   return (
     <div
       className={cn(
-        "min-w-0 shrink-0 px-2",
+        "min-w-0 shrink-0",
         slideClasses.mobile,
         slideClasses.sm,
         slideClasses.md,
