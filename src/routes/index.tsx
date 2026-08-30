@@ -115,7 +115,7 @@ const BONUSES = [
   },
   {
     id: "Bono 03",
-    title: "Mapa Interactivo de Clasificación de Suelo",
+    title: "Guía de Plantas Compañeras",
     text: "Mapa editable para zonificación y uso del terreno.",
     image: "https://www.image2url.com/r2/default/images/1788106038628-648b34b8-4103-4476-8cc2-c8bca7dc3b0b.blob",
   },
