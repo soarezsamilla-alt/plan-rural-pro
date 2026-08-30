@@ -389,7 +389,7 @@ function PlanRuralLanding() {
           <h2 className="mt-1 font-display text-2xl leading-tight md:text-3xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
-          <div className="mx-auto mt-4 max-w-2xl">
+          <div className="mx-auto mt-4 max-w-3xl">
             <img
               src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
