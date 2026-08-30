@@ -11,7 +11,8 @@ import {
   SectionTitle,
 } from "@/components/plan-rural/primitives";
 import { SampleGallery } from "@/components/plan-rural/sample-gallery";
-import comparacionAereaAsset from "@/assets/comparacion-aerea-rural.png.asset.json";
+import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
+import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
