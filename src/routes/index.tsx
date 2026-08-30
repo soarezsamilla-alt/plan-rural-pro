@@ -11,6 +11,7 @@ import {
   SectionTitle,
 } from "@/components/plan-rural/primitives";
 import { SampleGallery } from "@/components/plan-rural/sample-gallery";
+import comparacionAereaAsset from "@/assets/comparacion-aerea-rural.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -298,11 +299,24 @@ function PlanRuralLanding() {
           Mira la diferencia Sin los Proyectos y Con los Proyectos
         </SectionTitle>
         <div className="mt-10">
-          <ImagePlaceholder
-            label="comparación split sin/con proyectos"
-            ratio="wide"
-            className="bg-card"
-          />
+          <div className="relative overflow-hidden rounded-2xl border-4 border-card bg-card shadow-lift">
+            <img
+              src={comparacionAereaAsset.url}
+              alt="Comparación aérea de una propiedad rural sin y con los proyectos"
+              className="w-full object-cover"
+              loading="lazy"
+              width={1200}
+              height={675}
+            />
+            <div className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:left-5 md:top-5 md:px-4 md:py-2 md:text-sm">
+              <span aria-hidden="true" className="mr-1.5 text-destructive">✕</span>
+              Sin los Proyectos
+            </div>
+            <div className="absolute right-3 top-3 rounded-full border border-white/20 bg-black/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm md:right-5 md:top-5 md:px-4 md:py-2 md:text-sm">
+              <span aria-hidden="true" className="mr-1.5 text-primary">✓</span>
+              Con +120 Proyectos
+            </div>
+          </div>
         </div>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <div className="rounded-2xl border border-border bg-muted/50 p-6">
