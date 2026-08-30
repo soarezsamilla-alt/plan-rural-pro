@@ -105,7 +105,7 @@ const BONUSES = [
     id: "Bono 01",
     title: "Pack de Construcciones Rurales",
     text: "10 planos listos de gallineros, chiqueros, establos y tanques.",
-    image: "bono-01",
+    image: "https://www.image2url.com/r2/default/images/1788105907110-daea85f2-2fd3-4a5a-83cc-e4ed5adfb9c6.blob",
   },
   {
     id: "Bono 02",
