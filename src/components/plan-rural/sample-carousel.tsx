@@ -14,10 +14,10 @@ interface SampleCarouselProps {
 
 const slideSizeMap = {
   small: {
-    mobile: "flex-[0_0_50%]",
-    sm: "sm:flex-[0_0_32%]",
-    md: "md:flex-[0_0_22%]",
-    lg: "lg:flex-[0_0_17%]",
+    mobile: "flex-[0_0_38%]",
+    sm: "sm:flex-[0_0_24%]",
+    md: "md:flex-[0_0_18%]",
+    lg: "lg:flex-[0_0_14%]",
   },
   default: {
     mobile: "flex-[0_0_75%]",
