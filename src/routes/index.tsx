@@ -316,16 +316,18 @@ function PlanRuralLanding() {
               <img
                 src={aereoAntesAsset.url}
                 alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
-                className="h-full w-full object-cover"
-                loading="lazy"
+                className="aspect-square h-full w-full bg-muted object-cover"
+                loading="eager"
+                decoding="async"
                 width={1024}
                 height={1024}
               />
               <img
                 src={aereoDespuesAsset.url}
                 alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
-                className="h-full w-full object-cover"
-                loading="lazy"
+                className="aspect-square h-full w-full bg-muted object-cover"
+                loading="eager"
+                decoding="async"
                 width={1024}
                 height={1024}
               />
