@@ -97,35 +97,39 @@ export function SampleCarousel({ images, className, size = "default", showArrows
         </div>
       </div>
 
-      <button
-        type="button"
-        aria-label="Imagen anterior"
-        onClick={scrollPrev}
-        disabled={!canScrollPrev}
-        className={cn(
-          "absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-primary text-primary-foreground shadow-lift backdrop-blur-sm transition-all",
-          "hover:scale-110 hover:bg-primary/90 hover:shadow-[0_0_20px_-4px_var(--color-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-          "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 disabled:hover:shadow-none",
-          "-translate-x-0 md:-translate-x-5",
-        )}
-      >
-        <ChevronLeft className="h-5 w-5" />
-      </button>
+      {showArrows && (
+        <>
+          <button
+            type="button"
+            aria-label="Imagen anterior"
+            onClick={scrollPrev}
+            disabled={!canScrollPrev}
+            className={cn(
+              "absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-primary text-primary-foreground shadow-lift backdrop-blur-sm transition-all",
+              "hover:scale-110 hover:bg-primary/90 hover:shadow-[0_0_20px_-4px_var(--color-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+              "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 disabled:hover:shadow-none",
+              "-translate-x-0 md:-translate-x-5",
+            )}
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
 
-      <button
-        type="button"
-        aria-label="Imagen siguiente"
-        onClick={scrollNext}
-        disabled={!canScrollNext}
-        className={cn(
-          "absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-primary text-primary-foreground shadow-lift backdrop-blur-sm transition-all",
-          "hover:scale-110 hover:bg-primary/90 hover:shadow-[0_0_20px_-4px_var(--color-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-          "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 disabled:hover:shadow-none",
-          "translate-x-0 md:translate-x-5",
-        )}
-      >
-        <ChevronRight className="h-5 w-5" />
-      </button>
+          <button
+            type="button"
+            aria-label="Imagen siguiente"
+            onClick={scrollNext}
+            disabled={!canScrollNext}
+            className={cn(
+              "absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-primary text-primary-foreground shadow-lift backdrop-blur-sm transition-all",
+              "hover:scale-110 hover:bg-primary/90 hover:shadow-[0_0_20px_-4px_var(--color-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+              "disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100 disabled:hover:shadow-none",
+              "translate-x-0 md:translate-x-5",
+            )}
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </>
+      )}
     </div>
   );
 }
