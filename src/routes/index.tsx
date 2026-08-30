@@ -398,7 +398,7 @@ function PlanRuralLanding() {
 
       {/* 6. TUDO INCLUÍDO */}
       <Section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <div className="group relative mb-2 inline-block">
             <div className="absolute -inset-1 rounded-full bg-harvest/30 opacity-75 blur-md transition-opacity duration-700 group-hover:opacity-100" />
             <div className="relative flex items-center gap-1.5 overflow-hidden rounded-full border border-harvest/25 bg-card/60 px-2.5 py-1 backdrop-blur-xl shadow-[0_0_12px_-3px_oklch(0.78_0.16_78_/_0.25)]">
@@ -412,7 +412,7 @@ function PlanRuralLanding() {
           <h2 className="mt-1 font-display text-2xl leading-tight md:text-3xl">
             +120 Proyectos de Propiedades Rurales Productivas
           </h2>
-          <div className="mx-auto mt-4 max-w-3xl">
+          <div className="mx-auto mt-4 max-w-5xl">
             <img
               src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
