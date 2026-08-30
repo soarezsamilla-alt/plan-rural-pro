@@ -207,19 +207,19 @@ function PlanRuralLanding() {
     <main className="min-h-screen bg-background">
       {/* 1. BADGE DE TOPO */}
       <div className="border-b border-border bg-primary text-primary-foreground">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 px-5 py-3 text-center sm:flex-row sm:text-left">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-5 py-3 text-center">
           <p className="text-sm font-medium">
             👀 10 personas están viendo esta página ahora
           </p>
-          <span className="rounded-full bg-harvest px-3 py-1 text-xs font-semibold uppercase tracking-widest text-harvest-foreground">
-            Edición Premium 2026
-          </span>
         </div>
       </div>
 
       {/* 2. HERO */}
       <Section className="bg-cream pb-14 pt-12 md:pb-20 md:pt-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <span className="mb-5 rounded-full bg-harvest px-3 py-1 text-xs font-semibold uppercase tracking-widest text-harvest-foreground">
+            Edición Premium 2026
+          </span>
           <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
             +120 Proyectos de Fincas y Propiedades Rurales Productivas que
             transforman tu tierra parada en una fuente de ingresos mensuales
