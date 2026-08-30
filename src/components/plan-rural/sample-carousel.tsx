@@ -94,6 +94,7 @@ export function SampleCarousel({
   size = "default",
   showArrows = true,
   marquee = false,
+  pauseOnHover = true,
 }: SampleCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
