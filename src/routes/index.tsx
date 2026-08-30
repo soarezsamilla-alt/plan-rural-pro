@@ -437,7 +437,7 @@ function PlanRuralLanding() {
               key={bonus.id}
               className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-soft"
             >
-              <ImagePlaceholder label={bonus.image} ratio="wide" />
+              <ImagePlaceholder label={bonus.image} ratio="wide" className="mx-auto block max-w-[220px]" />
               <h3 className="mt-4 text-base leading-snug text-card-foreground">
                 🎁 {bonus.id} — {bonus.title}
               </h3>
