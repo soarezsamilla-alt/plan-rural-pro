@@ -9,14 +9,15 @@ interface SampleCarouselProps {
   className?: string;
   size?: "small" | "default" | "large";
   showArrows?: boolean;
+  marquee?: boolean;
 }
 
 const slideSizeMap = {
   small: {
-    mobile: "flex-[0_0_60%]",
-    sm: "sm:flex-[0_0_40%]",
-    md: "md:flex-[0_0_28%]",
-    lg: "lg:flex-[0_0_22%]",
+    mobile: "flex-[0_0_50%]",
+    sm: "sm:flex-[0_0_32%]",
+    md: "md:flex-[0_0_22%]",
+    lg: "lg:flex-[0_0_17%]",
   },
   default: {
     mobile: "flex-[0_0_75%]",
@@ -32,7 +33,46 @@ const slideSizeMap = {
   },
 };
 
-export function SampleCarousel({ images, className, size = "default", showArrows = true }: SampleCarouselProps) {
+function MarqueeSlide({
+  src,
+  index,
+  size,
+}: {
+  src: string;
+  index: number;
+  size: "small" | "default" | "large";
+}) {
+  const slideClasses = slideSizeMap[size];
+  return (
+    <div
+      className={cn(
+        "min-w-0 shrink-0 px-2",
+        slideClasses.mobile,
+        slideClasses.sm,
+        slideClasses.md,
+        slideClasses.lg,
+      )}
+    >
+      <div className="flex items-center justify-center overflow-hidden rounded-xl border border-border bg-card shadow-soft">
+        <img
+          src={src}
+          alt={`Muestra del material ${String(index + 1).padStart(2, "0")}`}
+          className="h-auto w-full object-contain"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  );
+}
+
+export function SampleCarousel({
+  images,
+  className,
+  size = "default",
+  showArrows = true,
+  marquee = false,
+}: SampleCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: "start",
@@ -67,6 +107,19 @@ export function SampleCarousel({ images, className, size = "default", showArrows
   }, [emblaApi, onSelect]);
 
   const slideClasses = slideSizeMap[size];
+
+  if (marquee) {
+    const duplicatedImages = [...images, ...images];
+    return (
+      <div className={cn("relative overflow-hidden rounded-2xl", className)}>
+        <div className="marquee-track">
+          {duplicatedImages.map((src, index) => (
+            <MarqueeSlide key={`${src}-${index}`} src={src} index={index % images.length} size={size} />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={cn("relative", className)}>
