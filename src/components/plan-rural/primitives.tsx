@@ -27,7 +27,7 @@ export function ImagePlaceholder({
         src={label}
         alt="Mockup del bono"
         className={cn(
-          "h-auto w-full rounded-xl object-cover",
+          "h-auto w-full rounded-xl object-contain",
           ratioMap[ratio],
           className,
         )}
