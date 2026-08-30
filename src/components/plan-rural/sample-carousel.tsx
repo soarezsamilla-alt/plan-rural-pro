@@ -32,7 +32,7 @@ const slideSizeMap = {
   },
 };
 
-export function SampleCarousel({ images, className, size = "default" }: SampleCarouselProps) {
+export function SampleCarousel({ images, className, size = "default", showArrows = true }: SampleCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       align: "start",
