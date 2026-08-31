@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check, Instagram } from "lucide-react";
+import { useEffect, useState } from "react";
 import {
   ImagePlaceholder,
   Section,
