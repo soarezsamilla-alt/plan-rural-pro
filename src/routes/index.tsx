@@ -519,7 +519,7 @@ function PlanRuralLanding() {
       <Section className="py-12 md:py-16">
         <div className="flex justify-center">
           <a
-            href="#planes"
+            href="#acceso-completo"
             className="button-soft-pulse inline-flex w-full items-center justify-center rounded-full bg-clay px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
 
           >
