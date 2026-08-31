@@ -547,9 +547,6 @@ function PlanRuralLanding() {
       <Section id="planes">
         <div className="mx-auto max-w-2xl text-center">
           <SectionTitle>Elige tu plan y empieza ahora</SectionTitle>
-          <p className="mt-4 inline-block rounded-full bg-harvest px-4 py-2 text-sm font-semibold text-harvest-foreground">
-            ⏱ OFERTA DISPONIBLE SOLO HOY, --/--/----
-          </p>
         </div>
 
         <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">
