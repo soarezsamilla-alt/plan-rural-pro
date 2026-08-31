@@ -589,7 +589,7 @@ function PlanRuralLanding() {
             </ul>
             <a
               href="#"
-              className="mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-6 py-4 text-sm font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-xs font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Quiero el Básico ›
             </a>
@@ -630,7 +630,7 @@ function PlanRuralLanding() {
             </ul>
             <a
               href="#"
-              className="mt-7 flex w-full items-center justify-center rounded-full bg-clay px-6 py-4 text-sm font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="mt-7 flex w-full items-center justify-center rounded-full bg-clay px-5 py-3 text-xs font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Quiero el plan completo ›
             </a>
