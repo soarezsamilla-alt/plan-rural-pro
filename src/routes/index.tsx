@@ -482,7 +482,7 @@ function PlanRuralLanding() {
         <div className="flex justify-center">
           <a
             href="#planes"
-            className="inline-flex w-full items-center justify-center rounded-full bg-clay px-10 py-5 text-center text-base font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-full bg-clay px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
           >
             Quiero el plan completo ›
           </a>
