@@ -630,9 +630,6 @@ function PlanRuralLanding() {
             >
               Quiero el plan completo ›
             </a>
-            <p className="mt-2 text-center text-xs text-muted-foreground">
-              [LINK DE CHECKOUT — COMPLETO]
-            </p>
           </article>
         </div>
 
