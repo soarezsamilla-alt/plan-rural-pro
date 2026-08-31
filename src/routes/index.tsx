@@ -13,6 +13,7 @@ import {
   SectionTitle,
 } from "@/components/plan-rural/primitives";
 import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
+import { SocialProofToast } from "@/components/plan-rural/social-proof-toast";
 import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
 import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
 import guaranteeSealAsset from "@/assets/guarantee-seal.png.asset.json";
