@@ -231,3 +231,18 @@
   animation-play-state: running;
 }
 
+@keyframes button-soft-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.42 0.096 148 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 10px oklch(0.42 0.096 148 / 0);
+  }
+}
+
+.button-soft-pulse {
+  animation: button-soft-pulse 2s ease-in-out infinite;
+}
+
+
