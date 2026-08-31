@@ -811,13 +811,6 @@ function PlanRuralLanding() {
         </div>
       </footer>
 
-      {/* Prova social flutuante */}
-      <div className="pointer-events-none fixed bottom-4 left-4 z-50 max-w-[calc(100%-2rem)] rounded-xl border border-border bg-card px-4 py-3 shadow-lift">
-        <p className="text-xs text-card-foreground">
-          <span className="font-semibold">Juan P., de Bogotá</span> — Acaba de
-          comprar · ahora mismo
-        </p>
-      </div>
     </main>
   );
 }
