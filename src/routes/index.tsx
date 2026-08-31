@@ -725,9 +725,9 @@ function PlanRuralLanding() {
 
           <a
             href="#"
-            className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
-            <Instagram className="h-5 w-5" />
+            <Instagram className="h-4 w-4" />
             Ver Plan Rural en Instagram
           </a>
           <p className="mt-3 text-center text-sm text-muted-foreground">
