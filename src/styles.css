@@ -259,5 +259,20 @@
   animation: button-border-glow 2.5s ease-in-out infinite;
 }
 
+@keyframes button-border-glow-clay {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.56 0.14 45 / 0.35);
+  }
+  50% {
+    box-shadow: 0 0 16px 2px oklch(0.56 0.14 45 / 0.45);
+  }
+}
+
+.button-border-glow-clay {
+  animation: button-border-glow-clay 2.5s ease-in-out infinite;
+}
+
+
 
 
