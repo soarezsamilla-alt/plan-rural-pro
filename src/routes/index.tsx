@@ -596,10 +596,10 @@ function PlanRuralLanding() {
 
         <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">
           {/* Plan Básico */}
-          <article className="rounded-3xl border border-border bg-card p-7 shadow-soft">
+          <article className="rounded-3xl border border-border bg-card p-5 shadow-soft">
             <div className="text-center">
               <h3 className="text-2xl text-card-foreground">Plan Básico</h3>
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mt-2 text-sm text-muted-foreground">
                 De <span className="line-through">$47 USD</span> por:
               </p>
               <p className="font-display text-4xl text-primary">$5,90</p>
@@ -608,12 +608,12 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
               alt="Mockup del Plan Básico de Plan Rural"
-              className="mockup-soft-pulse mt-5 h-auto w-full rounded-xl object-cover"
+              className="mockup-soft-pulse mt-4 h-auto w-full rounded-xl object-cover"
               width="800"
               height="450"
               loading="lazy"
             />
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-4 space-y-2">
               {BASIC_ITEMS.map((item) => (
                 <li key={item.text} className="flex gap-3 text-sm">
                   <span
@@ -636,21 +636,20 @@ function PlanRuralLanding() {
               href="https://pay.hotmart.com/H106592377U?checkoutMode=10"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-border-glow mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-xs font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="button-border-glow mt-5 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-xs font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-
               Quiero el Básico ›
             </a>
           </article>
 
           {/* Acceso Completo */}
-          <article className="relative rounded-3xl border-2 border-clay bg-card p-7 shadow-lift">
+          <article className="relative rounded-3xl border-2 border-clay bg-card p-5 shadow-lift">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-clay-foreground">
               ★ Acceso Completo ★
             </span>
             <div className="text-center">
               <h3 className="mt-2 text-2xl text-card-foreground">Acceso Completo</h3>
-              <p className="mt-3 text-sm text-muted-foreground">
+              <p className="mt-2 text-sm text-muted-foreground">
                 De <span className="line-through">$137 USD</span> por:
               </p>
               <p className="font-display text-4xl text-clay">$9,90</p>
@@ -661,12 +660,12 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
               alt="Mockup del acceso completo a Plan Rural"
-              className="mockup-soft-pulse mt-5 h-auto w-full rounded-xl object-cover"
+              className="mockup-soft-pulse mt-4 h-auto w-full rounded-xl object-cover"
               width="800"
               height="450"
               loading="lazy"
             />
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-4 space-y-2">
               {FULL_ITEMS.map((item) => (
                 <li key={item} className="flex gap-3 text-sm text-card-foreground">
                   <span aria-hidden="true" className="text-primary">
@@ -680,8 +679,7 @@ function PlanRuralLanding() {
               href="https://pay.hotmart.com/K105902897X?checkoutMode=10"
               target="_blank"
               rel="noopener noreferrer"
-              className="button-border-glow-clay mt-7 flex w-full items-center justify-center rounded-full border-2 border-clay-foreground/30 bg-clay px-5 py-3 text-xs font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-
+              className="button-border-glow-clay mt-5 flex w-full items-center justify-center rounded-full border-2 border-clay-foreground/30 bg-clay px-5 py-3 text-xs font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
               Quiero el plan completo ›
             </a>
