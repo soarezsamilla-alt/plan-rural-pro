@@ -497,7 +497,13 @@ function PlanRuralLanding() {
               key={bonus.id}
               className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-soft"
             >
-              <ImagePlaceholder label={bonus.image} ratio="wide" className="mockup-soft-pulse mx-auto block max-w-[220px]" />
+              <img
+                src={bonus.image}
+                alt={`Mockup de ${bonus.title}`}
+                className="mockup-soft-pulse mx-auto block h-auto w-full max-w-[220px] rounded-xl object-contain"
+                loading="lazy"
+                decoding="async"
+              />
               <h3 className="mt-4 text-base leading-snug text-card-foreground">
                 🎁 {bonus.id} — {bonus.title}
               </h3>
