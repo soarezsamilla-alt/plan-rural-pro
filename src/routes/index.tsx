@@ -14,9 +14,6 @@ import {
 } from "@/components/plan-rural/primitives";
 import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
 import { SocialProofToast } from "@/components/plan-rural/social-proof-toast";
-import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
-import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
-import guaranteeSealAsset from "@/assets/guarantee-seal.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,37 +106,37 @@ const BONUSES = [
     id: "Bono 01",
     title: "Pack de Construcciones Rurales",
     text: "10 planos listos de gallineros, chiqueros, establos y tanques.",
-    image: "https://www.image2url.com/r2/default/images/1788105907110-daea85f2-2fd3-4a5a-83cc-e4ed5adfb9c6.blob",
+    image: "/img/1788105907110-daea85f2-2fd3-4a5a-83cc-e4ed5adfb9c6.png",
   },
   {
     id: "Bono 02",
     title: "Calculadora de ROI Productivo",
     text: "Calculadora editable con retorno financiero estimado.",
-    image: "https://www.image2url.com/r2/default/images/1788105963768-6b826a84-9149-431e-a3f3-544ee53878ab.blob",
+    image: "/img/1788105963768-6b826a84-9149-431e-a3f3-544ee53878ab.png",
   },
   {
     id: "Bono 03",
     title: "Guía de Plantas Compañeras",
     text: "Aprende qué plantar junto para aumentar la productividad.",
-    image: "https://www.image2url.com/r2/default/images/1788106038628-648b34b8-4103-4476-8cc2-c8bca7dc3b0b.blob",
+    image: "/img/1788106038628-648b34b8-4103-4476-8cc2-c8bca7dc3b0b.png",
   },
   {
     id: "Bono 04",
     title: "Manual de Energía Solar Rural",
     text: "Dimensiona sistemas solares para casas, pozos y riego.",
-    image: "https://www.image2url.com/r2/default/images/1788106085460-45dbe0c5-d117-45e7-9a0a-20bbfe4aa462.blob",
+    image: "/img/1788106085460-45dbe0c5-d117-45e7-9a0a-20bbfe4aa462.png",
   },
   {
     id: "Bono 05",
     title: "Guía de Cultivos de Alto Valor",
     text: "Descubre las plantas más rentables por m².",
-    image: "https://www.image2url.com/r2/default/images/1788106129504-e7e19a14-fc07-41a8-89ac-ae837938b8c0.blob",
+    image: "/img/1788106129504-e7e19a14-fc07-41a8-89ac-ae837938b8c0.png",
   },
   {
     id: "Bono 06",
     title: "Manual de Agua y Riego",
     text: "Capta agua de lluvia, arma cisternas y riego eficiente.",
-    image: "https://www.image2url.com/r2/default/images/1788106168351-5a6ee2ac-f161-4a5e-8a84-6e698d3fb5a7.blob",
+    image: "/img/1788106168351-5a6ee2ac-f161-4a5e-8a84-6e698d3fb5a7.png",
   },
 ];
 
@@ -205,26 +202,26 @@ const FAQ = [
 ];
 
 const SAMPLES = [
-  "https://www.image2url.com/r2/default/images/1788107393364-2b3f0664-1e15-43bb-9c2b-6f9fbf0aa883.blob",
-  "https://www.image2url.com/r2/default/images/1788107424751-eae8c672-f3de-4ef0-9675-e318f9afdfa0.blob",
-  "https://www.image2url.com/r2/default/images/1788107447842-cb731f8d-72d6-4b41-8509-644d126e50a0.blob",
-  "https://www.image2url.com/r2/default/images/1788107467441-c8066bd3-a828-45de-82e7-0b2a74d147fc.blob",
-  "https://www.image2url.com/r2/default/images/1788107484909-b89bfc94-c0c4-440b-bffd-60c2b5491e36.blob",
-  "https://www.image2url.com/r2/default/images/1788107499463-6fd4097f-4147-4389-9026-39eccf1290a8.blob",
-  "https://www.image2url.com/r2/default/images/1788107519031-5c573030-c0d4-473c-8a20-d69aa9228775.blob",
-  "https://www.image2url.com/r2/default/images/1788107533217-76cf1aab-0dac-4c25-b0d8-2f2c91819532.blob",
-  "https://www.image2url.com/r2/default/images/1788107551863-d2a8c87b-13b7-4155-8c58-f6c815100a10.blob",
-  "https://www.image2url.com/r2/default/images/1788107567584-03d2a691-01be-4d3d-8c38-e3ecde11e06a.blob",
-  "https://www.image2url.com/r2/default/images/1788107621199-bd881447-1d48-451c-aa3a-42aca152646d.blob",
-  "https://www.image2url.com/r2/default/images/1788107634508-d3ec530a-ad08-4e5a-98dc-a79648deb9f4.blob",
-  "https://www.image2url.com/r2/default/images/1788107653346-63c97a92-36d9-42d6-abc1-130cec3c5c5b.blob",
-  "https://www.image2url.com/r2/default/images/1788107667770-1b2a54b2-61a1-46e5-aec9-151d65146675.blob",
-  "https://www.image2url.com/r2/default/images/1788107682306-8278b1cf-50c6-4594-9f99-c5c2351ccf89.blob",
-  "https://www.image2url.com/r2/default/images/1788107695201-6f23b95f-588d-44d4-98af-280537375171.blob",
-  "https://www.image2url.com/r2/default/images/1788107713951-3e6b1cd3-4370-4108-9065-a1e9efa8b663.blob",
-  "https://www.image2url.com/r2/default/images/1788107727394-b56757ec-4084-4228-a9dd-f1f720e2c39f.blob",
-  "https://www.image2url.com/r2/default/images/1788107741565-c424f3b4-ceee-46cc-8e65-d5600c620219.blob",
-  "https://www.image2url.com/r2/default/images/1788107756331-33998a6f-dc99-4866-a39b-1bb460a98657.blob",
+  "/img/1788107393364-2b3f0664-1e15-43bb-9c2b-6f9fbf0aa883.png",
+  "/img/1788107424751-eae8c672-f3de-4ef0-9675-e318f9afdfa0.png",
+  "/img/1788107447842-cb731f8d-72d6-4b41-8509-644d126e50a0.png",
+  "/img/1788107467441-c8066bd3-a828-45de-82e7-0b2a74d147fc.png",
+  "/img/1788107484909-b89bfc94-c0c4-440b-bffd-60c2b5491e36.png",
+  "/img/1788107499463-6fd4097f-4147-4389-9026-39eccf1290a8.png",
+  "/img/1788107519031-5c573030-c0d4-473c-8a20-d69aa9228775.png",
+  "/img/1788107533217-76cf1aab-0dac-4c25-b0d8-2f2c91819532.png",
+  "/img/1788107551863-d2a8c87b-13b7-4155-8c58-f6c815100a10.png",
+  "/img/1788107567584-03d2a691-01be-4d3d-8c38-e3ecde11e06a.png",
+  "/img/1788107621199-bd881447-1d48-451c-aa3a-42aca152646d.png",
+  "/img/1788107634508-d3ec530a-ad08-4e5a-98dc-a79648deb9f4.png",
+  "/img/1788107653346-63c97a92-36d9-42d6-abc1-130cec3c5c5b.png",
+  "/img/1788107667770-1b2a54b2-61a1-46e5-aec9-151d65146675.png",
+  "/img/1788107682306-8278b1cf-50c6-4594-9f99-c5c2351ccf89.png",
+  "/img/1788107695201-6f23b95f-588d-44d4-98af-280537375171.png",
+  "/img/1788107713951-3e6b1cd3-4370-4108-9065-a1e9efa8b663.png",
+  "/img/1788107727394-b56757ec-4084-4228-a9dd-f1f720e2c39f.png",
+  "/img/1788107741565-c424f3b4-ceee-46cc-8e65-d5600c620219.png",
+  "/img/1788107756331-33998a6f-dc99-4866-a39b-1bb460a98657.png",
 ];
 
 /* -------------------------------------------------------------- página --- */
@@ -298,7 +295,7 @@ function PlanRuralLanding() {
             </span>
           </h1>
           <img
-            src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
+            src="/img/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
             alt="Mockup del pack Plan Rural Edición Premium"
             className="mockup-soft-pulse my-8 h-auto w-full max-w-lg rounded-xl object-cover md:my-10"
             width="800"
@@ -377,7 +374,7 @@ function PlanRuralLanding() {
           <div className="rounded-[1.75rem] bg-foreground p-2 shadow-lift md:p-3">
             <div className="relative grid grid-cols-2 overflow-hidden rounded-3xl">
               <img
-                src={aereoAntesAsset.url}
+                src="/img/aereo-antes.jpg"
                 alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
                 className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
@@ -386,7 +383,7 @@ function PlanRuralLanding() {
                 height={1024}
               />
               <img
-                src={aereoDespuesAsset.url}
+                src="/img/aereo-despues.jpg"
                 alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
                 className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
@@ -454,7 +451,7 @@ function PlanRuralLanding() {
           </h2>
           <div className="mx-auto mt-2 max-w-5xl">
             <img
-              src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
+              src="/img/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
               className="mockup-soft-pulse h-auto w-full rounded-xl object-cover"
               width="800"
@@ -575,12 +572,12 @@ function PlanRuralLanding() {
         <div className="mt-10">
           <SampleCarousel
             images={[
-              "https://www.image2url.com/r2/default/images/1778636217662-148f37cc-1c82-403e-b5b2-382b7420f389.png",
-              "https://www.image2url.com/r2/default/images/1778636316874-a0464222-93ee-420e-a099-ef453dbea104.png",
-              "https://www.image2url.com/r2/default/images/1778636394813-07c11f56-46b7-49a5-9834-4f24846eeb3e.png",
-              "https://www.image2url.com/r2/default/images/1778637463831-fff617a2-1307-4006-b7a7-2b35037e57c7.png",
-              "https://www.image2url.com/r2/default/images/1778637789011-de4100ad-82ff-401f-be3d-d381a3f5679e.png",
-              "https://www.image2url.com/r2/default/images/1778638049492-5c823441-bc0b-4efb-9a58-f3a4bc8b0bcc.png",
+              "/img/1778636217662-148f37cc-1c82-403e-b5b2-382b7420f389.png",
+              "/img/1778636316874-a0464222-93ee-420e-a099-ef453dbea104.png",
+              "/img/1778636394813-07c11f56-46b7-49a5-9834-4f24846eeb3e.png",
+              "/img/1778637463831-fff617a2-1307-4006-b7a7-2b35037e57c7.png",
+              "/img/1778637789011-de4100ad-82ff-401f-be3d-d381a3f5679e.png",
+              "/img/1778638049492-5c823441-bc0b-4efb-9a58-f3a4bc8b0bcc.png",
             ]}
             size="default"
             showArrows
@@ -606,7 +603,7 @@ function PlanRuralLanding() {
               <p className="text-sm text-muted-foreground">(Pago único)</p>
             </div>
             <img
-              src="https://www.image2url.com/r2/default/images/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
+              src="/img/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
               alt="Mockup del Plan Básico de Plan Rural"
               className="mockup-soft-pulse mt-4 h-auto w-full rounded-xl object-cover"
               width="800"
@@ -658,7 +655,7 @@ function PlanRuralLanding() {
               </p>
             </div>
             <img
-              src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
+              src="/img/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
               alt="Mockup del acceso completo a Plan Rural"
               className="mockup-soft-pulse mt-4 h-auto w-full rounded-xl object-cover"
               width="800"
@@ -708,7 +705,7 @@ function PlanRuralLanding() {
 
         <div className="mx-auto mt-10 max-w-xl rounded-3xl border border-border bg-card p-6 text-center shadow-[0_0_40px_-15px_var(--primary)] md:p-8">
           <img
-            src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
+            src="/img/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpg"
             alt="Foto de perfil Plan Rural"
             className="mockup-soft-pulse mx-auto h-24 w-24 rounded-full object-cover"
           />
@@ -751,17 +748,17 @@ function PlanRuralLanding() {
 
           <div className="mt-6 grid grid-cols-3 gap-3">
             <img
-              src="https://www.image2url.com/r2/default/images/1784162433156-31d8c83c-eb7e-454e-89a1-c2413b97c243.jpeg"
+              src="/img/1784162433156-31d8c83c-eb7e-454e-89a1-c2413b97c243.jpg"
               alt="Publicación de Instagram 1"
               className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
             <img
-              src="https://www.image2url.com/r2/default/images/1784162475827-6719dd72-b625-49ad-b833-ee9d95b40e91.jpeg"
+              src="/img/1784162475827-6719dd72-b625-49ad-b833-ee9d95b40e91.jpg"
               alt="Publicación de Instagram 2"
               className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
             <img
-              src="https://www.image2url.com/r2/default/images/1784162552079-8ab86902-d376-4d50-97c1-39feff26d288.jpeg"
+              src="/img/1784162552079-8ab86902-d376-4d50-97c1-39feff26d288.jpg"
               alt="Publicación de Instagram 3"
               className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
@@ -793,7 +790,7 @@ function PlanRuralLanding() {
       <Section>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl border border-border bg-card p-8 text-center shadow-soft md:flex-row md:text-left">
           <img
-            src={guaranteeSealAsset.url}
+            src="/img/guarantee-seal.png"
             alt="Sello de garantía de 7 días"
             width={1024}
             height={1024}
