@@ -861,6 +861,7 @@ function PlanRuralLanding() {
         </div>
       </footer>
 
+      <SocialProofToast />
     </main>
   );
 }
