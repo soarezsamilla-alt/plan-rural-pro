@@ -177,14 +177,18 @@
   0%,
   100% {
     filter: drop-shadow(0 10px 26px oklch(0.42 0.096 148 / 0.10));
+    transform: scale(1) translateZ(0);
   }
   50% {
     filter: drop-shadow(0 18px 42px oklch(0.42 0.096 148 / 0.22));
+    transform: scale(1.015) translateZ(0);
   }
 }
 
 .mockup-soft-pulse {
   animation: mockup-soft-pulse 3.5s ease-in-out infinite;
+  will-change: transform, filter;
+  backface-visibility: hidden;
 }
 
 @keyframes badge-shimmer {
