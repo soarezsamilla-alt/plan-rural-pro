@@ -725,7 +725,7 @@ function PlanRuralLanding() {
           </div>
 
           <a
-            href="https://www.instagram.com/plan.rural.oficial?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term="
+            href="https://www.instagram.com/plan.rural.oficial?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
