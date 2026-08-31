@@ -552,12 +552,14 @@ function PlanRuralLanding() {
         <div className="mt-10 grid items-start gap-6 lg:grid-cols-2">
           {/* Plan Básico */}
           <article className="rounded-3xl border border-border bg-card p-7 shadow-soft">
-            <h3 className="text-2xl text-card-foreground">Plan Básico</h3>
-            <p className="mt-3 text-sm text-muted-foreground">
-              De <span className="line-through">$47 USD</span> por:
-            </p>
-            <p className="font-display text-4xl text-primary">$5,90</p>
-            <p className="text-sm text-muted-foreground">(Pago único)</p>
+            <div className="text-center">
+              <h3 className="text-2xl text-card-foreground">Plan Básico</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                De <span className="line-through">$47 USD</span> por:
+              </p>
+              <p className="font-display text-4xl text-primary">$5,90</p>
+              <p className="text-sm text-muted-foreground">(Pago único)</p>
+            </div>
             <img
               src="https://www.image2url.com/r2/default/images/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
               alt="Mockup del Plan Básico de Plan Rural"
