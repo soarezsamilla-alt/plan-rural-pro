@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Check, Instagram } from "lucide-react";
 import {
   ImagePlaceholder,
   Section,
