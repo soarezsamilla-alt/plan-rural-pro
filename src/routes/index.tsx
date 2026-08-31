@@ -14,6 +14,7 @@ import {
 import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
 import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
 import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
+import guaranteeSealAsset from "@/assets/guarantee-seal.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
