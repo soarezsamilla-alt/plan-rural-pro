@@ -292,7 +292,7 @@ function PlanRuralLanding() {
           </div>
           <h1 className="font-display text-3xl leading-[1.15] text-foreground sm:text-4xl lg:text-5xl">
             +120 Proyectos de Fincas y Propiedades Rurales Productivas{" "}
-            <span className="text-harvest">
+            <span className="font-semibold" style={{ color: "#246E3A" }}>
               QUE TRANSFORMAN TU TIERRA PARADA EN UNA FUENTE DE INGRESOS MENSUALES
             </span>
           </h1>
