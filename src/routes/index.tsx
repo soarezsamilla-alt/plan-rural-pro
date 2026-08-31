@@ -14,9 +14,6 @@ import {
 } from "@/components/plan-rural/primitives";
 import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
 import { SocialProofToast } from "@/components/plan-rural/social-proof-toast";
-import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
-import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
-import guaranteeSealAsset from "@/assets/guarantee-seal.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -377,7 +374,7 @@ function PlanRuralLanding() {
           <div className="rounded-[1.75rem] bg-foreground p-2 shadow-lift md:p-3">
             <div className="relative grid grid-cols-2 overflow-hidden rounded-3xl">
               <img
-                src={aereoAntesAsset.url}
+                src="/img/aereo-antes.jpg"
                 alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
                 className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
@@ -386,7 +383,7 @@ function PlanRuralLanding() {
                 height={1024}
               />
               <img
-                src={aereoDespuesAsset.url}
+                src="/img/aereo-despues.jpg"
                 alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
                 className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
@@ -793,7 +790,7 @@ function PlanRuralLanding() {
       <Section>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl border border-border bg-card p-8 text-center shadow-soft md:flex-row md:text-left">
           <img
-            src={guaranteeSealAsset.url}
+            src="/img/guarantee-seal.png"
             alt="Sello de garantía de 7 días"
             width={1024}
             height={1024}
