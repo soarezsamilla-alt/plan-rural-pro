@@ -595,7 +595,7 @@ function PlanRuralLanding() {
 
           {/* Acceso Completo */}
           <article className="relative rounded-3xl border-2 border-clay bg-card p-7 shadow-lift">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-4 py-1 text-xs font-bold uppercase tracking-widest text-clay-foreground">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-clay-foreground">
               ★ Acceso Completo ★
             </span>
             <h3 className="mt-2 text-2xl text-card-foreground">Acceso Completo</h3>
