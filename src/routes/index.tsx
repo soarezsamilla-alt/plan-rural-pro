@@ -597,7 +597,8 @@ function PlanRuralLanding() {
             </ul>
             <a
               href="#"
-              className="mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-xs font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+              className="button-border-glow mt-7 flex w-full items-center justify-center rounded-full border-2 border-primary px-5 py-3 text-xs font-bold uppercase tracking-wide text-primary transition-colors hover:bg-primary hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+
             >
               Quiero el Básico ›
             </a>
