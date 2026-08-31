@@ -14,6 +14,7 @@ import {
 import { SampleCarousel } from "@/components/plan-rural/sample-carousel";
 import aereoAntesAsset from "@/assets/aereo-antes.jpg.asset.json";
 import aereoDespuesAsset from "@/assets/aereo-despues.jpg.asset.json";
+import guaranteeSealAsset from "@/assets/guarantee-seal.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -747,10 +748,13 @@ function PlanRuralLanding() {
       {/* 14. GARANTIA */}
       <Section>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 rounded-3xl border border-border bg-card p-8 text-center shadow-soft md:flex-row md:text-left">
-          <ImagePlaceholder
-            label="sello garantía 7 días"
-            ratio="square"
-            className="h-32 w-32 shrink-0 rounded-full"
+          <img
+            src={guaranteeSealAsset.url}
+            alt="Sello de garantía de 7 días"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="h-32 w-32 shrink-0 rounded-full object-contain"
           />
           <div>
             <h2 className="font-display text-2xl text-card-foreground md:text-3xl">
