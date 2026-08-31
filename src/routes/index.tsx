@@ -598,14 +598,16 @@ function PlanRuralLanding() {
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-clay-foreground">
               ★ Acceso Completo ★
             </span>
-            <h3 className="mt-2 text-2xl text-card-foreground">Acceso Completo</h3>
-            <p className="mt-3 text-sm text-muted-foreground">
-              De <span className="line-through">$137 USD</span> por:
-            </p>
-            <p className="font-display text-4xl text-clay">$9,90</p>
-            <p className="text-sm text-muted-foreground">
-              (Pago único · Acceso vitalicio + Bonos)
-            </p>
+            <div className="text-center">
+              <h3 className="mt-2 text-2xl text-card-foreground">Acceso Completo</h3>
+              <p className="mt-3 text-sm text-muted-foreground">
+                De <span className="line-through">$137 USD</span> por:
+              </p>
+              <p className="font-display text-4xl text-clay">$9,90</p>
+              <p className="text-sm text-muted-foreground">
+                (Pago único · Acceso vitalicio + Bonos)
+              </p>
+            </div>
             <img
               src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
               alt="Mockup del acceso completo a Plan Rural"
