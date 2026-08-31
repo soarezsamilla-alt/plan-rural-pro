@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Check, Instagram } from "lucide-react";
 import {
   ImagePlaceholder,
   Section,
@@ -661,51 +662,50 @@ function PlanRuralLanding() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 rounded-3xl border border-border bg-card p-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:p-8">
-          <div>
-            <div className="flex items-center gap-4">
-              <img
-                src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
-                alt="Foto de perfil Plan Rural"
-                className="h-20 w-20 shrink-0 rounded-full object-cover"
-              />
-              <div>
-                <p className="font-display text-xl text-card-foreground">Plan Rural</p>
-                <p className="text-sm text-muted-foreground">@plan.rural.oficial</p>
-              </div>
-            </div>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+        <div className="mx-auto mt-10 max-w-xl rounded-3xl border border-border bg-card p-6 text-center md:p-8">
+          <img
+            src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
+            alt="Foto de perfil Plan Rural"
+            className="mx-auto h-24 w-24 rounded-full object-cover"
+          />
+          <p className="mt-4 font-display text-2xl text-card-foreground">
+            Plan Rural
+          </p>
+          <p className="text-sm text-muted-foreground">@plan.rural.oficial</p>
+
+          <div className="mt-4 inline-flex flex-col items-start gap-2 text-sm text-muted-foreground">
+            <p className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
               Planificación rural de la manera correcta
-              <br />
+            </p>
+            <p className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-primary" />
               +120 proyectos profesionales de fincas
             </p>
-            <dl className="mt-6 grid grid-cols-3 gap-3 text-center">
-              <div className="rounded-xl bg-muted p-3">
-                <dt className="font-display text-lg text-foreground">+120</dt>
-                <dd className="text-xs text-muted-foreground">Proyectos</dd>
-              </div>
-              <div className="rounded-xl bg-muted p-3">
-                <dt className="font-display text-lg text-foreground">
-                  [preencher com número real]
-                </dt>
-                <dd className="text-xs text-muted-foreground">Productores</dd>
-              </div>
-              <div className="rounded-xl bg-muted p-3">
-                <dt className="font-display text-lg text-foreground">15+</dt>
-                <dd className="text-xs text-muted-foreground">Años exp.</dd>
-              </div>
-            </dl>
-            <a
-              href="#"
-              className="mt-6 flex w-full items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-            >
-              Ver Plan Rural en Instagram
-            </a>
-            <p className="mt-3 text-center text-sm text-muted-foreground">
-              ¿Tienes dudas? Escríbenos directo al perfil
-            </p>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+
+          <dl className="mt-6 grid grid-cols-3 gap-3 text-center">
+            <div>
+              <dt className="font-display text-lg text-foreground">+120</dt>
+              <dd className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                Proyectos
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-foreground">12 mil</dt>
+              <dd className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                Productores
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-foreground">15+</dt>
+              <dd className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
+                Años exp.
+              </dd>
+            </div>
+          </dl>
+
+          <div className="mt-6 grid grid-cols-3 gap-3">
             <img
               src="https://www.image2url.com/r2/default/images/1784162433156-31d8c83c-eb7e-454e-89a1-c2413b97c243.jpeg"
               alt="Publicación de Instagram 1"
@@ -722,6 +722,18 @@ function PlanRuralLanding() {
               className="aspect-square w-full rounded-xl object-cover"
             />
           </div>
+
+          <a
+            href="#"
+            className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
+            <Instagram className="h-5 w-5" />
+            Ver Plan Rural en Instagram
+          </a>
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            ¿Tienes dudas? Escríbenos directo al perfil{" "}
+            <Check className="inline h-4 w-4 text-primary" />
+          </p>
         </div>
 
         <p className="mt-6 text-center text-xs font-semibold uppercase tracking-[0.15em] text-primary">
