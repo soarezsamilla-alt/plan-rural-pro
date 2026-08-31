@@ -640,7 +640,9 @@ function PlanRuralLanding() {
               ))}
             </ul>
             <a
-              href="#"
+              href="https://pay.hotmart.com/K105902897X?checkoutMode=10"
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-border-glow-clay mt-7 flex w-full items-center justify-center rounded-full border-2 border-clay-foreground/30 bg-clay px-5 py-3 text-xs font-bold uppercase tracking-wide text-clay-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
 
             >
