@@ -254,11 +254,11 @@ function PlanRuralLanding() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-harvest opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-harvest" />
           </span>
-          <p className="text-xs font-bold uppercase tracking-wider sm:text-sm">
+          <p className="text-[10px] font-bold uppercase tracking-wider sm:text-xs">
             {offerDeadline ? (
               <>
                 Oferta disponible hasta el{" "}
-                <span className="text-harvest font-extrabold drop-shadow-sm">
+                <span className="text-destructive font-extrabold drop-shadow-sm">
                   {offerDeadline}
                 </span>
               </>
