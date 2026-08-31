@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check, Instagram } from "lucide-react";
+import { useEffect, useState } from "react";
 import {
   ImagePlaceholder,
   Section,
@@ -228,13 +229,31 @@ const SAMPLES = [
 /* -------------------------------------------------------------- página --- */
 
 function PlanRuralLanding() {
+  const [offerDeadline, setOfferDeadline] = useState<string>("");
+
+  useEffect(() => {
+    const base = new Date(2026, 7, 31); // 31/08/2026
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const deadline =
+      today >= base ? new Date(today.getTime() + 24 * 60 * 60 * 1000) : base;
+    const formatted = deadline.toLocaleDateString("es-AR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+    setOfferDeadline(formatted);
+  }, []);
+
   return (
     <main className="min-h-screen bg-background">
       {/* 1. BADGE DE TOPO */}
       <div className="border-b border-border bg-primary text-primary-foreground">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-5 py-3 text-center">
           <p className="text-sm font-medium">
-            👀 10 personas están viendo esta página ahora
+            {offerDeadline
+              ? `Oferta disponible hasta el ${offerDeadline}`
+              : "Oferta disponible por tiempo limitado"}
           </p>
         </div>
       </div>
