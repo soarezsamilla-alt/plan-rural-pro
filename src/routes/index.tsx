@@ -266,7 +266,7 @@ function PlanRuralLanding() {
             height="1000"
             loading="eager"
           />
-          <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
             La biblioteca más completa de proyectos rurales de América Latina:
             +120 planos profesionales con medidas reales, divisiones
             estratégicas y layouts listos para ejecutar.
