@@ -591,9 +591,6 @@ function PlanRuralLanding() {
             >
               Quiero el Básico ›
             </a>
-            <p className="mt-2 text-center text-xs text-muted-foreground">
-              [LINK DE CHECKOUT — BÁSICO]
-            </p>
           </article>
 
           {/* Acceso Completo */}
