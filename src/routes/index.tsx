@@ -706,9 +706,13 @@ function PlanRuralLanding() {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3">
-            {[1, 2, 3].map((n) => (
-              <ImagePlaceholder key={n} label={`ig-post-${n}`} ratio="square" />
-            ))}
+            <img
+              src="https://www.image2url.com/r2/default/images/1784162433156-31d8c83c-eb7e-454e-89a1-c2413b97c243.jpeg"
+              alt="Publicación de Instagram 1"
+              className="aspect-square w-full rounded-xl object-cover"
+            />
+            <ImagePlaceholder label="ig-post-2" ratio="square" />
+            <ImagePlaceholder label="ig-post-3" ratio="square" />
           </div>
         </div>
 
