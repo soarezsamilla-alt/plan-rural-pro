@@ -247,19 +247,27 @@ function PlanRuralLanding() {
 
   return (
     <main className="min-h-screen bg-background">
-      {/* 1. BADGE DE TOPO */}
-      <div className="border-b border-border bg-primary text-primary-foreground">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-center px-5 py-3 text-center">
-          <p className="text-sm font-medium">
+      {/* 1. BADGE DE TOPO — FIXED */}
+      <div className="fixed left-0 right-0 top-0 z-50 border-b border-harvest/30 bg-gradient-to-r from-primary via-primary to-harvest/20 text-primary-foreground shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)]">
+        <div className="relative mx-auto flex w-full max-w-6xl items-center justify-center gap-2 overflow-hidden px-5 py-2.5 text-center">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-harvest opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-harvest" />
+          </span>
+          <p className="text-xs font-bold uppercase tracking-wider sm:text-sm">
             {offerDeadline
               ? `Oferta disponible hasta el ${offerDeadline}`
               : "Oferta disponible por tiempo limitado"}
           </p>
+          <span aria-hidden="true" className="badge-shimmer absolute inset-0" />
         </div>
       </div>
 
+      {/* Spacer for fixed badge */}
+      <div className="h-10 sm:h-11" />
+
       {/* 2. HERO */}
-      <Section className="bg-cream pb-14 pt-12 md:pb-20 md:pt-16">
+      <Section className="bg-cream pb-14 pt-10 md:pb-20 md:pt-14">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <div className="group relative mb-5">
             {/* Soft glow layer */}
