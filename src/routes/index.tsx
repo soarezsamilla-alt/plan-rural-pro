@@ -732,7 +732,8 @@ function PlanRuralLanding() {
             href="https://www.instagram.com/plan.rural.oficial?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+            className="button-border-glow mt-4 flex w-full items-center justify-center gap-2 rounded-full border-2 border-primary-foreground/30 bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+
           >
             <Instagram className="h-4 w-4" />
             Ver Plan Rural en Instagram
