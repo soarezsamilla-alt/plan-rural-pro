@@ -664,10 +664,10 @@ function PlanRuralLanding() {
         <div className="mt-10 grid gap-6 rounded-3xl border border-border bg-card p-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:p-8">
           <div>
             <div className="flex items-center gap-4">
-              <ImagePlaceholder
-                label="foto de perfil Plan Rural"
-                ratio="square"
-                className="h-20 w-20 shrink-0 rounded-full"
+              <img
+                src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
+                alt="Foto de perfil Plan Rural"
+                className="h-20 w-20 shrink-0 rounded-full object-cover"
               />
               <div>
                 <p className="font-display text-xl text-card-foreground">Plan Rural</p>
