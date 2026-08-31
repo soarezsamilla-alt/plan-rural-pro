@@ -378,7 +378,7 @@ function PlanRuralLanding() {
               <img
                 src={aereoAntesAsset.url}
                 alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
-                className="aspect-square h-full w-full bg-muted object-cover"
+                className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
                 decoding="async"
                 width={1024}
@@ -387,7 +387,7 @@ function PlanRuralLanding() {
               <img
                 src={aereoDespuesAsset.url}
                 alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
-                className="aspect-square h-full w-full bg-muted object-cover"
+                className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
                 decoding="async"
                 width={1024}
@@ -455,7 +455,7 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1788017734020-aca3f843-e313-4f5f-b1f2-6ccce5f5eb3d.png"
               alt="Kit con más de 120 proyectos rurales productivos"
-              className="h-auto w-full rounded-xl object-cover"
+              className="mockup-soft-pulse h-auto w-full rounded-xl object-cover"
               width="800"
               height="1000"
               loading="lazy"
@@ -499,7 +499,7 @@ function PlanRuralLanding() {
               key={bonus.id}
               className="flex flex-col rounded-2xl border border-border bg-card p-5 shadow-soft"
             >
-              <ImagePlaceholder label={bonus.image} ratio="wide" className="mx-auto block max-w-[220px]" />
+              <ImagePlaceholder label={bonus.image} ratio="wide" className="mockup-soft-pulse mx-auto block max-w-[220px]" />
               <h3 className="mt-4 text-base leading-snug text-card-foreground">
                 🎁 {bonus.id} — {bonus.title}
               </h3>
@@ -607,7 +607,7 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1788017703132-d1ef4d1a-8253-4a09-a2c5-1fb586d66206.png"
               alt="Mockup del Plan Básico de Plan Rural"
-              className="mt-5 h-auto w-full rounded-xl object-cover"
+              className="mockup-soft-pulse mt-5 h-auto w-full rounded-xl object-cover"
               width="800"
               height="450"
               loading="lazy"
@@ -660,7 +660,7 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1788017254104-7d6377d3-e9ea-4182-ac72-34c45a4fe7d8.png"
               alt="Mockup del acceso completo a Plan Rural"
-              className="mt-5 h-auto w-full rounded-xl object-cover"
+              className="mockup-soft-pulse mt-5 h-auto w-full rounded-xl object-cover"
               width="800"
               height="450"
               loading="lazy"
@@ -711,7 +711,7 @@ function PlanRuralLanding() {
           <img
             src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
             alt="Foto de perfil Plan Rural"
-            className="mx-auto h-24 w-24 rounded-full object-cover"
+            className="mockup-soft-pulse mx-auto h-24 w-24 rounded-full object-cover"
           />
           <p className="mt-4 font-display text-2xl text-card-foreground">
             Plan Rural
@@ -754,17 +754,17 @@ function PlanRuralLanding() {
             <img
               src="https://www.image2url.com/r2/default/images/1784162433156-31d8c83c-eb7e-454e-89a1-c2413b97c243.jpeg"
               alt="Publicación de Instagram 1"
-              className="aspect-square w-full rounded-xl object-cover"
+              className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
             <img
               src="https://www.image2url.com/r2/default/images/1784162475827-6719dd72-b625-49ad-b833-ee9d95b40e91.jpeg"
               alt="Publicación de Instagram 2"
-              className="aspect-square w-full rounded-xl object-cover"
+              className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
             <img
               src="https://www.image2url.com/r2/default/images/1784162552079-8ab86902-d376-4d50-97c1-39feff26d288.jpeg"
               alt="Publicación de Instagram 3"
-              className="aspect-square w-full rounded-xl object-cover"
+              className="mockup-soft-pulse aspect-square w-full rounded-xl object-cover"
             />
           </div>
 
@@ -799,7 +799,7 @@ function PlanRuralLanding() {
             width={1024}
             height={1024}
             loading="lazy"
-            className="h-32 w-32 shrink-0 rounded-full object-contain"
+            className="mockup-soft-pulse h-32 w-32 shrink-0 rounded-full object-contain"
           />
           <div>
             <h2 className="font-display text-2xl text-card-foreground md:text-3xl">
