@@ -531,28 +531,19 @@ function PlanRuralLanding() {
         <SectionTitle className="mx-auto max-w-2xl text-center">
           Resultados reales y comentarios de productores que ya usan Plan Rural.
         </SectionTitle>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            "https://www.image2url.com/r2/default/images/1778636217662-148f37cc-1c82-403e-b5b2-382b7420f389.png",
-            "https://www.image2url.com/r2/default/images/1778636316874-a0464222-93ee-420e-a099-ef453dbea104.png",
-            "https://www.image2url.com/r2/default/images/1778636394813-07c11f56-46b7-49a5-9834-4f24846eeb3e.png",
-            "https://www.image2url.com/r2/default/images/1778637463831-fff617a2-1307-4006-b7a7-2b35037e57c7.png",
-            "https://www.image2url.com/r2/default/images/1778637789011-de4100ad-82ff-401f-be3d-d381a3f5679e.png",
-            "https://www.image2url.com/r2/default/images/1778638049492-5c823441-bc0b-4efb-9a58-f3a4bc8b0bcc.png",
-          ].map((src, index) => (
-            <div
-              key={src}
-              className="overflow-hidden rounded-2xl border border-border bg-card shadow-soft"
-            >
-              <img
-                src={src}
-                alt={`Testimonio ${String(index + 1).padStart(2, "0")} de productor usando Plan Rural`}
-                className="h-auto w-full object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          ))}
+        <div className="mt-10">
+          <SampleCarousel
+            images={[
+              "https://www.image2url.com/r2/default/images/1778636217662-148f37cc-1c82-403e-b5b2-382b7420f389.png",
+              "https://www.image2url.com/r2/default/images/1778636316874-a0464222-93ee-420e-a099-ef453dbea104.png",
+              "https://www.image2url.com/r2/default/images/1778636394813-07c11f56-46b7-49a5-9834-4f24846eeb3e.png",
+              "https://www.image2url.com/r2/default/images/1778637463831-fff617a2-1307-4006-b7a7-2b35037e57c7.png",
+              "https://www.image2url.com/r2/default/images/1778637789011-de4100ad-82ff-401f-be3d-d381a3f5679e.png",
+              "https://www.image2url.com/r2/default/images/1778638049492-5c823441-bc0b-4efb-9a58-f3a4bc8b0bcc.png",
+            ]}
+            size="default"
+            showArrows
+          />
         </div>
       </Section>
 
