@@ -314,7 +314,7 @@ function PlanRuralLanding() {
             Acceso inmediato en tu correo · Pago 100% seguro
           </p>
           <a
-            href="#planes"
+            href="#acceso-completo"
             className="button-soft-pulse mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
           >
             Quiero mi proyecto por $5,90
@@ -643,7 +643,7 @@ function PlanRuralLanding() {
           </article>
 
           {/* Acceso Completo */}
-          <article className="relative rounded-3xl border-2 border-clay bg-card p-5 shadow-lift">
+          <article id="acceso-completo" className="relative rounded-3xl border-2 border-clay bg-card p-5 shadow-lift scroll-mt-24">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-clay px-3 py-0.5 text-[10px] font-bold uppercase tracking-widest text-clay-foreground">
               ★ Acceso Completo ★
             </span>
