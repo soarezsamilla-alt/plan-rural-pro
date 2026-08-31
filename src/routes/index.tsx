@@ -662,7 +662,7 @@ function PlanRuralLanding() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 max-w-xl rounded-3xl border border-border bg-card p-6 text-center md:p-8">
+        <div className="mx-auto mt-10 max-w-xl rounded-3xl border border-border bg-card p-6 text-center shadow-[0_0_40px_-15px_var(--primary)] md:p-8">
           <img
             src="https://www.image2url.com/r2/default/images/1784162372803-ae25ecd4-3a92-4ca2-9126-40939f9da072.jpeg"
             alt="Foto de perfil Plan Rural"
