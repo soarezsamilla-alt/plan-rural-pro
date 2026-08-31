@@ -255,9 +255,16 @@ function PlanRuralLanding() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-harvest" />
           </span>
           <p className="text-xs font-bold uppercase tracking-wider sm:text-sm">
-            {offerDeadline
-              ? `Oferta disponible hasta el ${offerDeadline}`
-              : "Oferta disponible por tiempo limitado"}
+            {offerDeadline ? (
+              <>
+                Oferta disponible hasta el{" "}
+                <span className="text-harvest font-extrabold drop-shadow-sm">
+                  {offerDeadline}
+                </span>
+              </>
+            ) : (
+              "Oferta disponible por tiempo limitado"
+            )}
           </p>
           <span aria-hidden="true" className="badge-shimmer absolute inset-0" />
         </div>
