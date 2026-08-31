@@ -54,6 +54,7 @@ export function SocialProofToast() {
   }, [hasStarted]);
 
   const notification = NOTIFICATIONS[currentIndex];
+  if (!notification) return null;
 
   return (
     <div
