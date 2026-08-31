@@ -278,10 +278,11 @@ function PlanRuralLanding() {
           </p>
           <a
             href="#planes"
-            className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
+            className="button-soft-pulse mt-7 inline-flex w-full items-center justify-center rounded-full bg-clay px-6 py-3 text-center text-sm font-bold uppercase tracking-wide text-clay-foreground shadow-lift transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 sm:w-auto"
           >
             Quiero mi proyecto por $5,90
           </a>
+
           <p className="mt-4 text-sm text-muted-foreground">
             ★ Acceso inmediato · 7 días de garantía ★
           </p>
