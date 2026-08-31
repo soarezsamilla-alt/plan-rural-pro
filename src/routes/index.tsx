@@ -711,7 +711,11 @@ function PlanRuralLanding() {
               alt="Publicación de Instagram 1"
               className="aspect-square w-full rounded-xl object-cover"
             />
-            <ImagePlaceholder label="ig-post-2" ratio="square" />
+            <img
+              src="https://www.image2url.com/r2/default/images/1784162475827-6719dd72-b625-49ad-b833-ee9d95b40e91.jpeg"
+              alt="Publicación de Instagram 2"
+              className="aspect-square w-full rounded-xl object-cover"
+            />
             <ImagePlaceholder label="ig-post-3" ratio="square" />
           </div>
         </div>
