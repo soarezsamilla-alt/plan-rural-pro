@@ -724,7 +724,9 @@ function PlanRuralLanding() {
           </div>
 
           <a
-            href="#"
+            href="https://www.instagram.com/plan.rural.oficial?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term="
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Instagram className="h-4 w-4" />
