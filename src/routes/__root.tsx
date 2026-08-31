@@ -111,6 +111,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         "data-utmify-prevent-xcod-sck": "",
         "data-utmify-prevent-subids": "",
       },
+      {
+        type: "text/javascript",
+        children: `window.pixelId = "6a45bbd49b02361985c4f400";`,
+      },
+      {
+        src: "https://cdn.utmify.com.br/scripts/pixel/pixel.js",
+        async: true,
+        defer: true,
+      },
     ],
 
   }),
