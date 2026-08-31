@@ -79,7 +79,7 @@ function MarqueeSlide({
         <img
           src={src}
           alt={`Muestra del material ${String(index + 1).padStart(2, "0")}`}
-          className="h-auto w-full object-contain"
+          className="mockup-soft-pulse h-auto w-full object-contain"
           loading="lazy"
           decoding="async"
         />
