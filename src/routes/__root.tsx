@@ -113,6 +113,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         async: true,
         defer: true,
       },
+      {
+        src: "https://cdn.utmify.com.br/scripts/utms/latest.js",
+        async: true,
+        defer: true,
+        "data-utmify-prevent-subids": "",
+      },
     ],
 
   }),
