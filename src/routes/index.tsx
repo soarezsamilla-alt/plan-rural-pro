@@ -374,18 +374,18 @@ function PlanRuralLanding() {
           <div className="rounded-[1.75rem] bg-foreground p-2 shadow-lift md:p-3">
             <div className="relative grid grid-cols-2 overflow-hidden rounded-3xl">
               <img
-                src="/img/aereo-antes.jpg"
-                alt="Vista aérea de una propiedad rural sin los proyectos: tierra seca y sin organización"
-                className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
+                src="/img/aereo-antes-novo.jpg"
+                alt="Vista aérea de la propiedad rural antes de los proyectos, casi vacía y desorganizada"
+                className="aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
                 decoding="async"
                 width={1024}
                 height={1024}
               />
               <img
-                src="/img/aereo-despues.jpg"
-                alt="Vista aérea de una propiedad rural con los proyectos: cultivos organizados y productivos"
-                className="mockup-soft-pulse aspect-square h-full w-full bg-muted object-cover"
+                src="/img/aereo-despues-novo.jpg"
+                alt="Vista aérea de la misma propiedad organizada con galinero, pocilga, corral, estanque de peces y huerto"
+                className="aspect-square h-full w-full bg-muted object-cover"
                 loading="eager"
                 decoding="async"
                 width={1024}
